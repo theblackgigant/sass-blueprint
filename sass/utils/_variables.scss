@@ -1,0 +1,96 @@
+/// Colors to use within our SASS
+///
+/// @author Reyno te Koppele
+///
+/// @type Map
+/// @prop {Color} color-pri [#3c7d84] - Color for primary use
+/// @prop {Color} color-sec [#007cba] - Color for secondary use
+/// @prop {Color} color-cta [#e06666] - Color to emphasize elements
+/// @prop {Color} color-bg [#ffffff] - Color for our background
+/// @prop {Color} color-text [#333333] - Color for our text
+/// @prop {Color} color-contrast [#ffffff] - Color to create extra contrast
+/// @prop {Color} color-border [#f6f6f6] - Color for our borders
+/// @prop {Color} color-shadow [#000000] - Color for our shadows
+///
+$colors: (
+  "color-pri": #3c7d84,
+  "color-sec": #007cba,
+  "color-cta": #e06666,
+  "color-bg": #ffffff,
+  "color-text": #333333,
+  "color-contrast": #ffffff,
+  "color-border": #f6f6f6,
+  "color-shadow": #000000,
+);
+
+/// Breakpoints for media queries and wrap elements
+///
+/// @author Reyno te Koppele
+///
+/// @type Map
+/// @prop {Number} xs [320px] - Breakpoint for extra small screens
+/// @prop {Number} s [375px] - Breakpoint for small screens
+/// @prop {Number} m [768px] - Breakpoint for medium screens
+/// @prop {Number} l [1024px] - Breakpoint for large screens
+/// @prop {Number} xl [1920px] - Breakpoint for extra large screens
+///
+$breakpoints: (
+  "xs": 320px,
+  "s": 375px,
+  "m": 768px,
+  "l": 1024px,
+  "xl": 1920px,
+);
+
+/// Add CSS variables to the DOM.
+///
+/// @author Reyno te Koppele
+///
+/// @require {function} hexToRGB
+/// @require {function} pxToRem
+/// @require {variable} $colors
+/// @require {variable} $breakpoints
+///
+/// @link https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties var()
+///
+:root {
+  @each $name, $hex in $colors {
+    --#{$name}: #{$hex};
+    --#{$name}-rgb: #{hexToRGB($hex)};
+  }
+
+  $font-size: 14px;
+  --font-size: 14px;
+  --font-size-small: #{pxToRem(10px, $font-size)};
+  --font-size-medium: #{pxToRem(24px, $font-size)};
+  --font-size-large: #{pxToRem(52px, $font-size)};
+
+  --font-text: Roboto;
+  --font-heading: Lato;
+  --font-fallback: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  --font-stack-pri: var(--font-text), var(--font-fallback);
+  --font-stack-heading: var(--font-heading), var(--font-fallback);
+
+  --spacing: 1rem;
+  --spacing-small: 0.8rem;
+  --spacing-medium: 2rem;
+  --spacing-large: 15rem;
+
+  --timing: 0.5s;
+  --timing-slow: 1s;
+  --timing-fast: 0.25s;
+
+  --easing: ease-in-out;
+  --easing-in: ease-in;
+  --easing-out: ease-out;
+
+  --border: 1px solid var(--color-border);
+  --border-radius: 15px;
+
+  --shadow: 0px 2px 16px 0px rgba(var(--color-shadow-rgb), 0.1);
+
+  @each $name, $size in $breakpoints {
+    --wrap-#{$name}: #{$size};
+  }
+}

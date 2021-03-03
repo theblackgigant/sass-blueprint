@@ -1,0 +1,28 @@
+/// Add media query for given size
+///
+/// @example
+///   @include breakpoint("m") {
+///     ...
+///   }
+///
+/// @author Reyno te Koppele
+///
+/// @param {String} $key - Key present in $breakpoints
+/// @content [Content for media query]
+///
+/// @require {variable} $breakpoints
+///
+/// @link https://sass-lang.com/documentation/modules/map#has-key map-has-key()
+/// @link https://sass-lang.com/documentation/modules/map#get map-get()
+///
+@mixin breakpoint($key) {
+  @if map-has-key($breakpoints, $key) {
+    $mq-breakpoint: map-get($breakpoints, $key);
+
+    @media screen and (max-width: #{$mq-breakpoint}) {
+      @content;
+    }
+  } @else {
+    @error "Map does not contain key: '#{$key}'";
+  }
+}

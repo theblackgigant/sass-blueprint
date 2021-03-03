@@ -1,0 +1,21 @@
+{
+  "name": "sass-blueprint",
+  "displayName": "Sass Blueprint",
+  "description": "Basic folder structure for your SASS project",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "docs": "node index.js"
+  },
+  "keywords": [
+    "SASS",
+    "SCSS",
+    "Documentation",
+    "Blueprint"
+  ],
+  "author": "Reyno te Koppele",
+  "license": "MIT",
+  "dependencies": {
+    "sassdoc": "^2.7.3"
+  }
+}

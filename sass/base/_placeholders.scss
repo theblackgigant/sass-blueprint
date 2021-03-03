@@ -1,0 +1,51 @@
+/// Placeholder for creating flex items
+///
+/// @author Reyno te Koppele
+///
+/// @example
+///   .my-flex-item {
+///     @extend %flex;
+///     ...
+///   }
+///
+///   .my-centered-flex-item {
+///     @extend %flex;
+///     @extend %flex--center;
+///     ...
+///   }
+///
+%flex {
+  display: flex;
+
+  &--center {
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+/// Placeholder for creating absolute positioned items
+///
+/// @author Reyno te Koppele
+///
+/// @example
+///   .my-absolute-item {
+///     @extend %absolute;
+///     ...
+///   }
+///
+///   .my-full-absolute-item {
+///     @extend %absolute;
+///     @extend %absolute--full;
+///     ...
+///   }
+///
+%absolute {
+  position: absolute;
+
+  &--full {
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+}

@@ -1,0 +1,66 @@
+/// Class for creating a wrap element
+///
+/// @author Reyno te Koppele
+///
+/// @link https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties var()
+///
+.wrap {
+  max-width: var(--wrap-l);
+  margin: 0 auto;
+}
+
+/// Class for creating a button or call-to-action button
+///
+/// @author Reyno te Koppele
+///
+/// @require %flex
+///
+/// @link https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties var()
+/// @link https://developer.mozilla.org/en-US/docs/Web/CSS/calc() calc()
+///
+.btn {
+  @extend %flex;
+  @extend %flex--center;
+  background: none;
+  border: var(--border-size, 1px) solid var(--color-text);
+  color: var(--color-text);
+  padding: calc(var(--spacing-small) - var(--border-size, 1px))
+    calc(var(--spacing-medium) - var(--border-size, 1px));
+  transition: background-color var(--timing-fast) var(--easing),
+    color var(--timing-fast) var(--easing);
+
+  &:hover {
+    background: var(--color-text);
+    color: var(--color-contrast);
+  }
+
+  &--cta {
+    --border-size: 0px;
+    border: none;
+    color: var(--color-contrast);
+    background: var(--color-cta);
+
+    &:hover {
+      background: var(--color-text);
+    }
+  }
+}
+
+/// Class for creating an evenly spaced grid
+///
+/// @author Reyno te Koppele
+///
+/// @require {mixin} breakpoint
+///
+/// @link https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties var()
+/// @link https://developer.mozilla.org/en-US/docs/Web/CSS/repeat() repeat()
+///
+.grid {
+  display: grid;
+  grid-template-columns: repeat(var(--column-count, 3), 1fr);
+  grid-gap: var(--spacing);
+
+  @include breakpoint("m") {
+    --column-count: 1;
+  }
+}
