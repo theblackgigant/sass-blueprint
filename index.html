@@ -1,0 +1,168 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Sass-blueprint - v1.0.0</title><link rel="stylesheet" href="assets/css/main.css"><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,500,700" rel="stylesheet" type="text/css"><meta name="viewport" content="width=device-width"><meta content="IE=edge, chrome=1" http-equiv="X-UA-Compatible"><!-- Open Graph tags --><meta property="og:title" content="Sass-blueprint - SassDoc"><meta property="og:type" content="website"><meta property="og:description" content="<p>Basic folder structure for your SASS project</p>
+"><!-- Thanks to Sass-lang.com for the icons --><link href="assets/images/favicon.png" rel="shortcut icon"></head><body><aside class="sidebar" role="nav"><div class="sidebar__header"><h1 class="sidebar__title">Sass-blueprint - 1.0.0</h1></div><div class="sidebar__body"><button type="button" class="btn-toggle js-btn-toggle" data-alt="Open all">Close all</button><p class="sidebar__item sidebar__item--heading" data-slug="reset"><a href="#reset">reset</a></p><div><p class="sidebar__item sidebar__item--sub-heading" data-slug="reset-css"><a href="#reset-css">css</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-group="reset" data-name="*" data-type="css"><a href="#reset-css-*">*</a></li><li class="sidebar__item sassdoc__item" data-group="reset" data-name="html" data-type="css"><a href="#reset-css-html">html</a></li><li class="sidebar__item sassdoc__item" data-group="reset" data-name="body" data-type="css"><a href="#reset-css-body">body</a></li><li class="sidebar__item sassdoc__item" data-group="reset" data-name="img" data-type="css"><a href="#reset-css-img">img</a></li><li class="sidebar__item sassdoc__item" data-group="reset" data-name="a" data-type="css"><a href="#reset-css-a">a</a></li></ul></div><p class="sidebar__item sidebar__item--heading" data-slug="undefined"><a href="#undefined">General</a></p><div><p class="sidebar__item sidebar__item--sub-heading" data-slug="undefined-css"><a href="#undefined-css">css</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-group="undefined" data-name=".wrap" data-type="css"><a href="#undefined-css-.wrap">.wrap</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name=".btn" data-type="css"><a href="#undefined-css-.btn">.btn</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name=".grid" data-type="css"><a href="#undefined-css-.grid">.grid</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name=":root" data-type="css"><a href="#undefined-css-:root">:root</a></li></ul><p class="sidebar__item sidebar__item--sub-heading" data-slug="undefined-placeholder"><a href="#undefined-placeholder">placeholders</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="flex" data-type="placeholder"><a href="#undefined-placeholder-flex">flex</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="absolute" data-type="placeholder"><a href="#undefined-placeholder-absolute">absolute</a></li></ul><p class="sidebar__item sidebar__item--sub-heading" data-slug="undefined-function"><a href="#undefined-function">functions</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="hexToRGB" data-type="function"><a href="#undefined-function-hexToRGB">hexToRGB</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="pxToRem" data-type="function"><a href="#undefined-function-pxToRem">pxToRem</a></li></ul><p class="sidebar__item sidebar__item--sub-heading" data-slug="undefined-mixin"><a href="#undefined-mixin">mixins</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="breakpoint" data-type="mixin"><a href="#undefined-mixin-breakpoint">breakpoint</a></li></ul><p class="sidebar__item sidebar__item--sub-heading" data-slug="undefined-variable"><a href="#undefined-variable">variables</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="colors" data-type="variable"><a href="#undefined-variable-colors">colors</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="breakpoints" data-type="variable"><a href="#undefined-variable-breakpoints">breakpoints</a></li></ul></div></div></aside><article class="main" role="main"><header class="header" role="banner"><div class="container"><div class="sassdoc__searchbar searchbar"><label for="js-search-input" class="visually-hidden">Search</label><div class="searchbar__form" id="js-search"><input name="search" type="search" class="searchbar__field" autocomplete="off" autofocus id="js-search-input" placeholder="Search"><ul class="searchbar__suggestions" id="js-search-suggestions"></ul></div></div></div></header><section class="main__section"><h1 class="main__heading" id="reset"><div class="container">reset</div></h1><section class="main__sub-section" id="reset-css"><h2 class="main__heading--secondary"><div class="container">css</div></h2><section class="main__item container item" id="reset-css-*"><h3 class="item__heading"><a class="item__name" href="#css-*">*</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}</code>" data-collapsed="* { ... }"><code>* { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Reset styles for all elements</p></div><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Reyno te Koppele</p></li></ul></section><section class="main__item container item" id="reset-css-html"><h3 class="item__heading"><a class="item__name" href="#css-html">html</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>html {
+  font-size: var(--font-size);
+}</code>" data-collapsed="html { ... }"><code>html { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Apply font-size so our rem scales properly</p></div><h3 class="item__sub-heading">Links</h3><ul class="list-unstyled"><li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties">var()</a></li></ul><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Reyno te Koppele</p></li></ul></section><section class="main__item container item" id="reset-css-body"><h3 class="item__heading"><a class="item__name" href="#css-body">body</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>body {
+  font-family: var(--font-stack-pri);
+  font-size: var(--font-size);
+}</code>" data-collapsed="body { ... }"><code>body { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Apply font-size so our rem scales properly and set our font family</p></div><h3 class="item__sub-heading">Links</h3><ul class="list-unstyled"><li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties">var()</a></li></ul><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Reyno te Koppele</p></li></ul></section><section class="main__item container item" id="reset-css-img"><h3 class="item__heading"><a class="item__name" href="#css-img">img</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>img {
+  max-width: 100%;
+  height: auto;
+}</code>" data-collapsed="img { ... }"><code>img { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Make sure our images scale properly</p></div><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Reyno te Koppele</p></li></ul></section><section class="main__item container item" id="reset-css-a"><h3 class="item__heading"><a class="item__name" href="#css-a">a</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>a {
+  color: inherit;
+  text-decoration: none;
+
+  &amp;:visited {
+    color: inherit;
+    text-decoration: none;
+  }
+}</code>" data-collapsed="a { ... }"><code>a { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Ignore default browser styling on all links</p></div><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Reyno te Koppele</p></li></ul></section></section></section><section class="main__section"><h1 class="main__heading" id="undefined"><div class="container">General</div></h1><section class="main__sub-section" id="undefined-css"><h2 class="main__heading--secondary"><div class="container">css</div></h2><section class="main__item container item" id="undefined-css-.wrap"><h3 class="item__heading"><a class="item__name" href="#css-.wrap">.wrap</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>.wrap {
+  max-width: var(--wrap-l);
+  margin: 0 auto;
+}</code>" data-collapsed=".wrap { ... }"><code>.wrap { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Class for creating a wrap element</p></div><h3 class="item__sub-heading">Links</h3><ul class="list-unstyled"><li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties">var()</a></li></ul><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Reyno te Koppele</p></li></ul></section><section class="main__item container item" id="undefined-css-.btn"><h3 class="item__heading"><a class="item__name" href="#css-.btn">.btn</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>.btn {
+  @extend %flex;
+  @extend %flex--center;
+  background: none;
+  border: var(--border-size, 1px) solid var(--color-text);
+  color: var(--color-text);
+  padding: calc(var(--spacing-small) - var(--border-size, 1px))
+    calc(var(--spacing-medium) - var(--border-size, 1px));
+  transition: background-color var(--timing-fast) var(--easing),
+    color var(--timing-fast) var(--easing);
+
+  &amp;:hover {
+    background: var(--color-text);
+    color: var(--color-contrast);
+  }
+
+  &amp;--cta {
+    --border-size: 0px;
+    border: none;
+    color: var(--color-contrast);
+    background: var(--color-cta);
+
+    &amp;:hover {
+      background: var(--color-text);
+    }
+  }
+}</code>" data-collapsed=".btn { ... }"><code>.btn { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Class for creating a button or call-to-action button</p></div><h3 class="item__sub-heading">Links</h3><ul class="list-unstyled"><li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties">var()</a></li><li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/calc()">calc()</a></li></ul><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Reyno te Koppele</p></li></ul></section><section class="main__item container item" id="undefined-css-.grid"><h3 class="item__heading"><a class="item__name" href="#css-.grid">.grid</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>.grid {
+  display: grid;
+  grid-template-columns: repeat(var(--column-count, 3), 1fr);
+  grid-gap: var(--spacing);
+
+  @include breakpoint(&quot;m&quot;) {
+    --column-count: 1;
+  }
+}</code>" data-collapsed=".grid { ... }"><code>.grid { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Class for creating an evenly spaced grid</p></div><h3 class="item__sub-heading">Links</h3><ul class="list-unstyled"><li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties">var()</a></li><li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/repeat()">repeat()</a></li></ul><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Reyno te Koppele</p></li></ul></section><section class="main__item container item" id="undefined-css-:root"><h3 class="item__heading"><a class="item__name" href="#css-:root">:root</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>:root {
+  @each $name, $hex in $colors {
+    --#{$name}: #{$hex};
+    --#{$name}-rgb: #{hexToRGB($hex)};
+  }
+
+  $font-size: 14px;
+  --font-size: 14px;
+  --font-size-small: #{pxToRem(10px, $font-size)};
+  --font-size-medium: #{pxToRem(24px, $font-size)};
+  --font-size-large: #{pxToRem(52px, $font-size)};
+
+  --font-text: Roboto;
+  --font-heading: Lato;
+  --font-fallback: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, &quot;Helvetica Neue&quot;, sans-serif;
+  --font-stack-pri: var(--font-text), var(--font-fallback);
+  --font-stack-heading: var(--font-heading), var(--font-fallback);
+
+  --spacing: 1rem;
+  --spacing-small: 0.8rem;
+  --spacing-medium: 2rem;
+  --spacing-large: 15rem;
+
+  --timing: 0.5s;
+  --timing-slow: 1s;
+  --timing-fast: 0.25s;
+
+  --easing: ease-in-out;
+  --easing-in: ease-in;
+  --easing-out: ease-out;
+
+  --border: 1px solid var(--color-border);
+  --border-radius: 15px;
+
+  --shadow: 0px 2px 16px 0px rgba(var(--color-shadow-rgb), 0.1);
+
+  @each $name, $size in $breakpoints {
+    --wrap-#{$name}: #{$size};
+  }
+}</code>" data-collapsed=":root { ... }"><code>:root { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Add CSS variables to the DOM.</p></div><h3 class="item__sub-heading">Links</h3><ul class="list-unstyled"><li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties">var()</a></li></ul><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Reyno te Koppele</p></li></ul></section></section><section class="main__sub-section" id="undefined-placeholder"><h2 class="main__heading--secondary"><div class="container">placeholders</div></h2><section class="main__item container item" id="undefined-placeholder-flex"><h3 class="item__heading"><a class="item__name" href="#placeholder-flex">flex</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="%flex { 
+  display: flex;
+
+  &amp;--center {
+    align-items: center;
+    justify-content: center;
+  }
+ }" data-collapsed="%flex { ... }"><code>%flex { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Placeholder for creating flex items</p></div><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>.my-flex-item {
+  @extend %flex;
+  ...
+}
+
+.my-centered-flex-item {
+  @extend %flex;
+  @extend %flex--center;
+  ...
+}</code></pre></div><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[css]</span> <a href="#undefined-css-.btn"><code>.btn</code></a></li></ul><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Reyno te Koppele</p></li></ul></section><section class="main__item container item" id="undefined-placeholder-absolute"><h3 class="item__heading"><a class="item__name" href="#placeholder-absolute">absolute</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="%absolute { 
+  position: absolute;
+
+  &amp;--full {
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+ }" data-collapsed="%absolute { ... }"><code>%absolute { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Placeholder for creating absolute positioned items</p></div><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>.my-absolute-item {
+  @extend %absolute;
+  ...
+}
+
+.my-full-absolute-item {
+  @extend %absolute;
+  @extend %absolute--full;
+  ...
+}</code></pre></div><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Reyno te Koppele</p></li></ul></section></section><section class="main__sub-section" id="undefined-function"><h2 class="main__heading--secondary"><div class="container">functions</div></h2><section class="main__item container item" id="undefined-function-hexToRGB"><h3 class="item__heading"><a class="item__name" href="#function-hexToRGB">hexToRGB</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@function hexToRGB($hex) { 
+  @return red($hex), green($hex), blue($hex);
+ }" data-collapsed="@function hexToRGB($hex) { ... }"><code>@function hexToRGB($hex) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Convert Hex to RGB to value</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter </span>Name</th><th scope="col"><span class="visually-hidden">parameter </span>Description</th><th scope="col"><span class="visually-hidden">parameter </span>Type</th><th scope="col"><span class="visually-hidden">parameter </span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$hex</code></th><td data-label="desc"><p>The hex code to convert</p></td><td data-label="type"><code>Color</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr></tbody></table><h3 class="item__sub-heading">Returns</h3><div class="item__description item__description--inline"><code>Color</code> &mdash;<p>RGB value that&#39;s generated</p></div><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>hexToRGB(#ffffff) =&gt; 255, 255, 255
+hexToRGB(#000000) =&gt; 0, 0, 0
+hexToRGB(#3c7d84) =&gt; 60, 125, 132</code></pre></div><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[css]</span> <a href="#undefined-css-:root"><code>:root</code></a></li></ul><h3 class="item__sub-heading">Links</h3><ul class="list-unstyled"><li><a href="https://sass-lang.com/documentation/modules/color#red">red()</a></li><li><a href="https://sass-lang.com/documentation/modules/color#green">green()</a></li><li><a href="https://sass-lang.com/documentation/modules/color#blue">blue()</a></li></ul><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Reyno te Koppele</p></li></ul></section><section class="main__item container item" id="undefined-function-pxToRem"><h3 class="item__heading"><a class="item__name" href="#function-pxToRem">pxToRem</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@function pxToRem($size, $rem: 14px) { 
+  @return ($size / $rem) + &quot;rem&quot;;
+ }" data-collapsed="@function pxToRem($size, $rem: 14px) { ... }"><code>@function pxToRem($size, $rem: 14px) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Convert px to rem unit</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter </span>Name</th><th scope="col"><span class="visually-hidden">parameter </span>Description</th><th scope="col"><span class="visually-hidden">parameter </span>Type</th><th scope="col"><span class="visually-hidden">parameter </span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$size</code></th><td data-label="desc"><p>Pixel size to be converted</p></td><td data-label="type"><code>Number</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$rem</code></th><td data-label="desc"><p>Base rem size in pixels</p></td><td data-label="type"><code>Number</code></td><td data-label="default"><code>14px</code></td></tr></tbody></table><h3 class="item__sub-heading">Returns</h3><div class="item__description item__description--inline"><code>Number</code> &mdash;<p>Rem value for given $size</p></div><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>pxToRem(14px) =&gt; 1rem
+pxToRem(52px) =&gt; 3.714rem
+pxToRem(20px, 16px) =&gt; 1.25rem</code></pre></div><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[css]</span> <a href="#undefined-css-:root"><code>:root</code></a></li></ul><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Reyno te Koppele</p></li></ul></section></section><section class="main__sub-section" id="undefined-mixin"><h2 class="main__heading--secondary"><div class="container">mixins</div></h2><section class="main__item container item" id="undefined-mixin-breakpoint"><h3 class="item__heading"><a class="item__name" href="#mixin-breakpoint">breakpoint</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin breakpoint($key) { 
+  @if map-has-key($breakpoints, $key) {
+    $mq-breakpoint: map-get($breakpoints, $key);
+
+    @media screen and (max-width: #{$mq-breakpoint}) {
+      @content;
+    }
+  } @else {
+    @error &quot;Map does not contain key: &#39;#{$key}&#39;&quot;;
+  }
+ }" data-collapsed="@mixin breakpoint($key) { ... }"><code>@mixin breakpoint($key) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Add media query for given size</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter </span>Name</th><th scope="col"><span class="visually-hidden">parameter </span>Description</th><th scope="col"><span class="visually-hidden">parameter </span>Type</th><th scope="col"><span class="visually-hidden">parameter </span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$key</code></th><td data-label="desc"><p>Key present in $breakpoints</p></td><td data-label="type"><code>String</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr></tbody></table><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>@include breakpoint(&quot;m&quot;) {
+  ...
+}</code></pre></div><h3 class="item__sub-heading">Throws</h3><ul class="list-unstyled"><li><p>Map does not contain key:</p></li></ul><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[variable]</span> <a href="#undefined-variable-breakpoints"><code>breakpoints</code></a></li></ul><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[css]</span> <a href="#undefined-css-.grid"><code>.grid</code></a></li></ul><h3 class="item__sub-heading">Links</h3><ul class="list-unstyled"><li><a href="https://sass-lang.com/documentation/modules/map#has-key">map-has-key()</a></li><li><a href="https://sass-lang.com/documentation/modules/map#get">map-get()</a></li></ul><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Reyno te Koppele</p></li></ul></section></section><section class="main__sub-section" id="undefined-variable"><h2 class="main__heading--secondary"><div class="container">variables</div></h2><section class="main__item container item" id="undefined-variable-colors"><h3 class="item__heading"><a class="item__name" href="#variable-colors">colors</a></h3><div class="item__code-wrapper"><pre class="item__code language-scss"><code>$colors: (
+  &quot;color-pri&quot;: #3c7d84,
+  &quot;color-sec&quot;: #007cba,
+  &quot;color-cta&quot;: #e06666,
+  &quot;color-bg&quot;: #ffffff,
+  &quot;color-text&quot;: #333333,
+  &quot;color-contrast&quot;: #ffffff,
+  &quot;color-border&quot;: #f6f6f6,
+  &quot;color-shadow&quot;: #000000,
+);</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Colors to use within our SASS</p></div><h3 class="item__sub-heading">Type</h3><p><code>Map</code></p><h3 class="item__sub-heading">Map structure</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">Map key </span>Name</th><th scope="col"><span class="visually-hidden">Map key </span>Description</th><th scope="col"><span class="visually-hidden">Map key </span>Type</th><th scope="col"><span class="visually-hidden">Map key </span>Value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>color-pri</code></th><td data-label="desc"><p>Color for primary use</p></td><td data-label="type"><code>Color</code></td><td data-label="default"><code class="color-preview--inline" style="background: #3c7d84; color: #fff;">#3c7d84</code></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>color-sec</code></th><td data-label="desc"><p>Color for secondary use</p></td><td data-label="type"><code>Color</code></td><td data-label="default"><code class="color-preview--inline" style="background: #007cba; color: #fff;">#007cba</code></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>color-cta</code></th><td data-label="desc"><p>Color to emphasize elements</p></td><td data-label="type"><code>Color</code></td><td data-label="default"><code class="color-preview--inline" style="background: #e06666; color: #000;">#e06666</code></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>color-bg</code></th><td data-label="desc"><p>Color for our background</p></td><td data-label="type"><code>Color</code></td><td data-label="default"><code class="color-preview--inline" style="background: #ffffff; color: #000;">#ffffff</code></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>color-text</code></th><td data-label="desc"><p>Color for our text</p></td><td data-label="type"><code>Color</code></td><td data-label="default"><code class="color-preview--inline" style="background: #333333; color: #fff;">#333333</code></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>color-contrast</code></th><td data-label="desc"><p>Color to create extra contrast</p></td><td data-label="type"><code>Color</code></td><td data-label="default"><code class="color-preview--inline" style="background: #ffffff; color: #000;">#ffffff</code></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>color-border</code></th><td data-label="desc"><p>Color for our borders</p></td><td data-label="type"><code>Color</code></td><td data-label="default"><code class="color-preview--inline" style="background: #f6f6f6; color: #000;">#f6f6f6</code></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>color-shadow</code></th><td data-label="desc"><p>Color for our shadows</p></td><td data-label="type"><code>Color</code></td><td data-label="default"><code class="color-preview--inline" style="background: #000000; color: #fff;">#000000</code></td></tr></tbody></table><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[css]</span> <a href="#undefined-css-:root"><code>:root</code></a></li></ul><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Reyno te Koppele</p></li></ul></section><section class="main__item container item" id="undefined-variable-breakpoints"><h3 class="item__heading"><a class="item__name" href="#variable-breakpoints">breakpoints</a></h3><div class="item__code-wrapper"><pre class="item__code language-scss"><code>$breakpoints: (
+  &quot;xs&quot;: 320px,
+  &quot;s&quot;: 375px,
+  &quot;m&quot;: 768px,
+  &quot;l&quot;: 1024px,
+  &quot;xl&quot;: 1920px,
+);</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Breakpoints for media queries and wrap elements</p></div><h3 class="item__sub-heading">Type</h3><p><code>Map</code></p><h3 class="item__sub-heading">Map structure</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">Map key </span>Name</th><th scope="col"><span class="visually-hidden">Map key </span>Description</th><th scope="col"><span class="visually-hidden">Map key </span>Type</th><th scope="col"><span class="visually-hidden">Map key </span>Value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>xs</code></th><td data-label="desc"><p>Breakpoint for extra small screens</p></td><td data-label="type"><code>Number</code></td><td data-label="default"><code>320px</code></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>s</code></th><td data-label="desc"><p>Breakpoint for small screens</p></td><td data-label="type"><code>Number</code></td><td data-label="default"><code>375px</code></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>m</code></th><td data-label="desc"><p>Breakpoint for medium screens</p></td><td data-label="type"><code>Number</code></td><td data-label="default"><code>768px</code></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>l</code></th><td data-label="desc"><p>Breakpoint for large screens</p></td><td data-label="type"><code>Number</code></td><td data-label="default"><code>1024px</code></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>xl</code></th><td data-label="desc"><p>Breakpoint for extra large screens</p></td><td data-label="type"><code>Number</code></td><td data-label="default"><code>1920px</code></td></tr></tbody></table><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[mixin]</span> <a href="#undefined-mixin-breakpoint"><code>breakpoint</code></a></li><li><span class="item__cross-type">[css]</span> <a href="#undefined-css-:root"><code>:root</code></a></li></ul><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Reyno te Koppele</p></li></ul></section></section></section><footer class="footer" role="contentinfo"><div class="container"><div class="footer__project-info project-info"><!-- Name and URL --> <span class="project-info__name">Sass-blueprint</span><!-- Version --> <span class="project-info__version">- v1.0.0</span><!-- License --> <span class="project-info__license">, under MIT</span></div><a class="footer__watermark" href="http://sassdoc.com"><img src="assets/images/logo_light_inline.svg" alt="SassDoc Logo"></a></div></footer></article><script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script><script>window.jQuery || document.write('<script src="assets/js/vendor/jquery.min.js"><\/script>')</script><script src="assets/js/main.min.js"></script></body></html>
