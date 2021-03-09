@@ -8,7 +8,7 @@ Move the `sass` folder to your project and start building.
 
 ## Documentation
 
-[View documentation](https://theblackgigant.github.io/sass-blueprint/), build with [SassDoc](http://sassdoc.com/).
+[View documentation](https://reynotekoppele.github.io/sass-blueprint/), build with [SassDoc](http://sassdoc.com/).
 
 Create new documentation
 
