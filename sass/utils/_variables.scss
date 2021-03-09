@@ -91,6 +91,6 @@ $breakpoints: (
   --shadow: 0px 2px 16px 0px rgba(var(--color-shadow-rgb), 0.1);
 
   @each $name, $size in $breakpoints {
-    --wrap-#{$name}: #{$size};
+    --breakpoint-#{$name}: #{$size};
   }
 }
