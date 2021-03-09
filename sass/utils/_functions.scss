@@ -34,3 +34,28 @@
 @function pxToRem($size, $rem: 14px) {
   @return ($size / $rem) + "rem";
 }
+
+/// Get direct parent from selector
+///
+/// @example
+///   .block .item {
+///     getDirectParent(&) => .item
+///   }
+///   .block .item .subitem {
+///     getDirectParent(&) => .subitem
+///   }
+///
+/// @author Reyno te Koppele
+///
+/// @param {List} $element - Element to get the parent from
+/// @return {Selector} Direct parent of element
+///
+/// @link https://sass-lang.com/documentation/modules/list#nth nth()
+/// @link https://sass-lang.com/documentation/modules/list#length length()
+///
+@function getDirectParent($element) {
+  $selector: nth($element, 1);
+  $direct-parent: nth($selector, length($selector));
+
+  @return $direct-parent;
+}
