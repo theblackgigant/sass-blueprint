@@ -19,5 +19,9 @@ npm run docs
 ## Usefull PostCSS plugins
 
 - https://github.com/postcss/autoprefixer
-- https://github.com/hail2u/node-css-mqpacker
+- https://github.com/csstools/postcss-preset-env
+- https://www.npmjs.com/package/postcss-flexbugs-fixes
 - https://github.com/Siilwyn/css-declaration-sorter
+- https://github.com/cssnano/cssnano
+- https://github.com/SassNinja/postcss-combine-media-query
+- https://github.com/ChristianMurphy/postcss-combine-duplicated-selectors
