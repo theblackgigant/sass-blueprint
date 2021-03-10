@@ -20,7 +20,7 @@ npm run docs
 
 - https://github.com/postcss/autoprefixer
 - https://github.com/csstools/postcss-preset-env
-- https://www.npmjs.com/package/postcss-flexbugs-fixes
+- https://github.com/luisrudge/postcss-flexbugs-fixes
 - https://github.com/Siilwyn/css-declaration-sorter
 - https://github.com/cssnano/cssnano
 - https://github.com/SassNinja/postcss-combine-media-query
