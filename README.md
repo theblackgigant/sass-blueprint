@@ -16,12 +16,6 @@ Create new documentation
 npm run docs
 ```
 
-## Usefull PostCSS plugins
+## Compiler
 
-- https://github.com/postcss/autoprefixer
-- https://github.com/csstools/postcss-preset-env
-- https://github.com/luisrudge/postcss-flexbugs-fixes
-- https://github.com/Siilwyn/css-declaration-sorter
-- https://github.com/cssnano/cssnano
-- https://github.com/SassNinja/postcss-combine-media-query
-- https://github.com/ChristianMurphy/postcss-combine-duplicated-selectors
+To compile the Sass you can use my [compiler](https://github.com/reynotekoppele/compiler) which adds fallback for specified browsers.
