@@ -1,0 +1,53 @@
+@use "./breakpoints" as *;
+
+/// Add media query for given size
+///
+/// @example
+///   @include mq("m") {
+///     ...
+///   }
+///
+/// @author Reyno te Koppele
+///
+/// @param {String} $key - Key present in $breakpoints
+/// @content [Content for media query]
+///
+/// @require {variable} $breakpoints
+///
+/// @link https://sass-lang.com/documentation/modules/map#has-key map-has-key()
+/// @link https://sass-lang.com/documentation/modules/map#get map-get()
+///
+@mixin mq($key) {
+  @if map-has-key($breakpoints, $key) {
+    $size: map-get($breakpoints, $key);
+
+    @media only screen and (min-width: #{$size}) {
+      @content;
+    }
+  } @else {
+    @error "Map does not contain key: '#{$key}'";
+  }
+}
+
+/// Add pseudo selector
+///
+/// @example
+///   @include pseudo {
+///     ...
+///   }
+///   @include pseudo($type: after) {
+///     ...
+///   }
+///
+/// @author Reyno te Koppele
+///
+/// @param {String} $type [before] - type of pseudo selector
+/// @param {String} $content [""] - Content to use
+/// @content [Content for pseudo selector]
+///
+@mixin pseudo($type: before, $content: "") {
+  &::#{$type} {
+    content: $content;
+    @content
+  }
+}

@@ -1,0 +1,53 @@
+/// Rem Spacing
+///
+/// @author Reyno te Koppele
+///
+/// @type Map
+/// @prop {Number} xsmall [0.8rem]
+/// @prop {Number} small [1rem]
+/// @prop {Number} medium [2rem]
+/// @prop {Number} large [4rem]
+/// @prop {Number} xlarge [12rem]
+///
+$rem-spacing: (
+  xsmall: 0.8rem,
+  small: 1rem,
+  medium: 2rem,
+  large: 4rem,
+  xlarge: 12rem,
+) !default;
+
+/// Em Spacing
+///
+/// @author Reyno te Koppele
+///
+/// @type Map
+/// @prop {Number} xsmall [0.8em]
+/// @prop {Number} small [1em]
+/// @prop {Number} medium [2em]
+/// @prop {Number} large [4em]
+/// @prop {Number} xlarge [12em]
+///
+$em-spacing: (
+  xsmall: 0.8em,
+  small: 1em,
+  medium: 2em,
+  large: 4em,
+  xlarge: 12em,
+) !default;
+
+/// Spacing for elements
+///
+/// @author Reyno te Koppele
+///
+/// @type Map
+/// @prop {Map} rem - Rem values for spacing
+/// @prop {Map} em - em values for spacing
+///
+/// @require {variable} $rem-spacing
+/// @require {variable} $em-spacing
+///
+$spacing: (
+  rem: $rem-spacing,
+  em: $em-spacing
+) !default;

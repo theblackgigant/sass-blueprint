@@ -1,0 +1,42 @@
+@use "../abstracts/mixins" as *;
+@use "../utilities/placeholders";
+
+/// Class for creating a button or call-to-action button
+///
+/// @author Reyno te Koppele
+///
+/// @require {placeholder} %flex
+///
+/// @link https://developer.mozilla.org/en-US/docs/Web/CSS/calc() calc()
+///
+.btn {
+  display: inline-flex;
+  @extend %flex--center;
+  background: none;
+  border: var(--border-size, 1px) var(--border-style) var(--clr-neutral-900);
+  color: var(--clr-neutral-900);
+  cursor: pointer;
+  outline: 0;
+  padding: calc(var(--sp-xsmall-em) - var(--border-size, 1px))
+    calc(var(--sp-medium-em) - var(--border-size, 1px));
+  transition: background-color var(--timing-fast) var(--easing),
+    color var(--timing-fast) var(--easing);
+
+  &:hover,
+  &:focus {
+    background: var(--clr-neutral-900);
+    color: var(--clr-neutral-100);
+  }
+
+  &--cta {
+    --border-size: 0px;
+    border: none;
+    color: var(--clr-neutral-100);
+    background: var(--clr-cta-400);
+
+    &:hover,
+    &:focus {
+      background: var(--clr-neutral-900);
+    }
+  }
+}

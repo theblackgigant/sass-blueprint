@@ -2,3 +2,4 @@ node_modules
 debug.log
 sass/*.css
 sass/*.map
+example.html

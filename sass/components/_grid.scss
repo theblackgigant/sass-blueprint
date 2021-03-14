@@ -1,0 +1,19 @@
+@use "../abstracts/mixins" as *;
+
+/// Class for creating an evenly spaced grid
+///
+/// @author Reyno te Koppele
+///
+/// @require {mixin} mq
+///
+/// @link https://developer.mozilla.org/en-US/docs/Web/CSS/repeat() repeat()
+///
+.grid {
+  display: grid;
+  grid-template-columns: repeat(var(--column-count, 1), 1fr);
+  gap: var(--sp-small);
+
+  @include mq("small") {
+    --column-count: 3;
+  }
+}

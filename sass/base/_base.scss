@@ -1,0 +1,97 @@
+/// Apply font-size for rem scaling
+///
+/// @author Reyno te Koppele
+///
+html {
+  font-size: 14px;
+}
+
+/// Apply color and font settings for general text
+///
+/// @author Reyno te Koppele
+///
+body {
+  font-size: var(--fs-300);
+  font-family: var(--font-stack-body);
+  color: var(--clr-neutral-800);
+}
+
+/// Apply color and font settings for headings
+///
+/// @author Reyno te Koppele
+///
+h1, h2, h3, h4 {
+  font-family: var(--font-stack-heading);
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--clr, var(--clr-neutral-900));
+}
+
+/// Apply font-size from abstracts/_font-scale
+///
+/// @author Reyno te Koppele
+///
+/// @see {variable} $font-scale
+///
+h1,
+.h1 {
+  font-size: var(--fs-800);
+}
+
+/// Apply font-size from abstracts/_font-scale
+///
+/// @author Reyno te Koppele
+///
+/// @see {variable} $font-scale
+///
+h2,
+.h2 {
+  font-size: var(--size);
+}
+
+/// Apply font-size from abstracts/_font-scale
+///
+/// @author Reyno te Koppele
+///
+/// @see {variable} $font-scale
+///
+h3,
+.h3 {
+  font-size: var(--fs-600);
+}
+
+/// Apply font-size from abstracts/_font-scale
+///
+/// @author Reyno te Koppele
+///
+/// @see {variable} $font-scale
+///
+h4,
+.h4 {
+  font-size: var(--fs-500);
+}
+
+/// Apply font-size from abstracts/_font-scale
+///
+/// @author Reyno te Koppele
+///
+/// @see {variable} $font-scale
+///
+small,
+.text-small {
+  font-size: var(--fs-200);
+}
+
+/// Ignore default browser styling on all links
+///
+/// @author Reyno te Koppele
+///
+a {
+  color: inherit;
+  text-decoration: none;
+
+  &:visited {
+    color: inherit;
+    text-decoration: none;
+  }
+}

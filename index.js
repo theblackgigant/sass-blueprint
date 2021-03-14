@@ -1,13 +1,13 @@
-const sassdoc = require("sassdoc");
+const sassdoc = require('sassdoc');
 
 (async (sassdoc) => {
   const options = {
-    dest: "./docs",
+    dest: './docs',
     verbose: true,
   };
 
   try {
-    await sassdoc("./sass", options);
+    await sassdoc('./sass', options);
   } catch (error) {
     console.log(error);
   }

@@ -1,0 +1,31 @@
+/// Font scaling for our fonts
+///
+/// @author Reyno te Koppele
+///
+/// @type Map
+/// @prop {Number} xs [320px] - Breakpoint for extra small screens
+/// @prop {Number} s [375px] - Breakpoint for small screens
+/// @prop {Number} m [768px] - Breakpoint for medium screens
+/// @prop {Number} l [1024px] - Breakpoint for large screens
+/// @prop {Number} xl [1920px] - Breakpoint for extra large screens
+///
+$font-scale: (
+  small:(
+    200: 0.8rem,
+    300: 1rem,
+    400: 1.125rem,
+    500: 1.563rem,
+    600: 1.953rem,
+    700: 2.441rem,
+    800: 3.052rem
+  ),
+  big:(
+    200: 0.8rem,
+    300: 1rem,
+    400: 1.25rem,
+    500: 2rem,
+    600: 2.827rem,
+    700: 4rem,
+    800: 5.653rem
+  )
+) !default;

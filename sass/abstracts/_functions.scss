@@ -1,21 +1,20 @@
-/// Convert Hex to RGB to value
+/// Converts a color into an RGB value
 ///
 /// @example
-///   hexToRGB(#ffffff) => 255, 255, 255
-///   hexToRGB(#000000) => 0, 0, 0
-///   hexToRGB(#3c7d84) => 60, 125, 132
+///   colorToRGB(#ffffff) => 255, 255, 255
+///   colorToRGB(hsl(0, 0%, 0%)) => 0, 0, 0
 ///
 /// @author Reyno te Koppele
 ///
-/// @param {Color} $hex - The hex code to convert
+/// @param {Color} $color - The color to convert
 /// @return {Color} RGB value that's generated
 ///
 /// @link https://sass-lang.com/documentation/modules/color#red red()
 /// @link https://sass-lang.com/documentation/modules/color#green green()
 /// @link https://sass-lang.com/documentation/modules/color#blue blue()
 ///
-@function hexToRGB($hex) {
-  @return red($hex), green($hex), blue($hex);
+@function colorToRGB($color) {
+  @return red($color), green($color), blue($color);
 }
 
 /// Convert px to rem unit
