@@ -1,3 +1,7 @@
+/// Class for spacing elements based on their font size
+///
+/// @author Reyno te Koppele
+///
 .wysiwyg > * + * {
-  margin-top: var(--spacing-small, .75em);
+  margin-top: var(--sp-xsmall-em, .75em);
 }
