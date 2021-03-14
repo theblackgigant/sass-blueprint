@@ -1,3 +1,6 @@
+@use "../utils/mixins" as m;
+@use "./placeholders";
+
 /// Class for creating a wrap element
 ///
 /// @author Reyno te Koppele
@@ -60,7 +63,7 @@
   grid-template-columns: repeat(var(--column-count, 3), 1fr);
   grid-gap: var(--spacing);
 
-  @include breakpoint("m") {
+  @include m.breakpoint("m") {
     --column-count: 1;
   }
 }

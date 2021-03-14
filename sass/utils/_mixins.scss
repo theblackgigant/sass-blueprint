@@ -1,3 +1,5 @@
+@use "./variables" as v;
+
 /// Add media query for given size
 ///
 /// @example
@@ -16,8 +18,8 @@
 /// @link https://sass-lang.com/documentation/modules/map#get map-get()
 ///
 @mixin breakpoint($key) {
-  @if map-has-key($breakpoints, $key) {
-    $mq-breakpoint: map-get($breakpoints, $key);
+  @if map-has-key(v.$breakpoints, $key) {
+    $mq-breakpoint: map-get(v.$breakpoints, $key);
 
     @media screen and (max-width: #{$mq-breakpoint}) {
       @content;
