@@ -1,4 +1,5 @@
 // See https://css-tricks.com/three-techniques-performant-custom-font-usage/
+// Unicode ranges: https://jrgraphix.net/r/Unicode/
 //
 // Commands for FontTools:
 // pyftsubset Roboto-Regular.ttf --unicodes="U+0020-007F" --flavor="woff2" --output-file="Roboto-Regular.woff2"
