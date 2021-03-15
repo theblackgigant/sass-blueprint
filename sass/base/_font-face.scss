@@ -1,9 +1,40 @@
 // See https://css-tricks.com/three-techniques-performant-custom-font-usage/
-// Unicode ranges: https://jrgraphix.net/r/Unicode/
-//
-// Commands for FontTools:
-// pyftsubset Roboto-Regular.ttf --unicodes="U+0020-007F" --flavor="woff2" --output-file="Roboto-Regular.woff2"
-// pyftsubset Roboto-Regular.ttf --unicodes="U+00A0-00FF,U+0100-017F" --flavor="woff2" --output-file="Roboto-Regular-Extra.woff2"
+
+/*
+# Unicodes
+-----------------------------------------------------------------------
+ ID  |  Unicode range(s)         |  Unicode range name(s)
+-----------------------------------------------------------------------
+ 1   |  U+0020-007F,U+00A0-00FF  |  Basic Latin, Latin-1 Supplement    
+ 2   |  U+0100-017F,U+20A0-20CF  |  Latin Extended-A, Currency Symbols 
+-----------------------------------------------------------------------
+
+> https://jrgraphix.net/r/Unicode/
+
+# Files
+-----------------------------------------------------
+ Files                 |  Unicode ID  |  File types  
+-----------------------------------------------------
+ Roboto-Light          |  1           |  woff, woff2 
+ Roboto-Light-Extra    |  2           |  woff, woff2 
+ Roboto-Regular        |  1           |  woff, woff2 
+ Roboto-Regular-Extra  |  2           |  woff, woff2 
+ Roboto-Bold           |  1           |  woff, woff2 
+ Roboto-Bold-Extra     |  2           |  woff, woff2 
+-----------------------------------------------------
+
+# Command:
+pyftsubset [input] --unicodes="[unicode-range(s)]" --flavor="[file type]" --output-file="[output]"
+
+# Example:
+- pyftsubset Roboto-Regular.ttf --unicodes="U+0020-007F,U+00A0-00FF" --flavor="woff2" --output-file="Roboto-Regular.woff2"
+- pyftsubset Roboto-Regular.ttf --unicodes="U+0020-007F,U+00A0-00FF" --flavor="woff" --output-file="Roboto-Regular.woff"
+
+- pyftsubset Roboto-Regular.ttf --unicodes="U+0100-017F,U+20A0-20CF" --flavor="woff2" --output-file="Roboto-Regular-Extra.woff2"
+- pyftsubset Roboto-Regular.ttf --unicodes="U+0100-017F,U+20A0-20CF" --flavor="woff" --output-file="Roboto-Regular-Extra.woff"
+
+> https://github.com/fonttools/fonttools
+*/
 
 // Roboto Light
 @font-face {
