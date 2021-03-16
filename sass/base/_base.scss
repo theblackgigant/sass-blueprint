@@ -1,3 +1,5 @@
+@use "../abstracts/mixins" as *;
+
 /// Apply font-size for rem scaling
 ///
 /// @author Reyno te Koppele
@@ -108,18 +110,18 @@ a[href]:not([class]) {
 ///
 /// @author Reyno te Koppele
 ///
+/// @require {mixin} pseudo
+///
 img {
   font-weight: var(--fs-300);
   text-align: center;
 
-  &::before {
-    content: "We're sorry, the image is broken :(";
+  @include pseudo($content: "We're sorry, the image is broken :(") {
     display: block;
     margin-bottom: var(--sp-xsmall);
   }
 
-  &::after {
-    content: "(url: " attr(src) ")";
+  @include pseudo($type: after, $content: "(url: " attr(src) ")") {
     display: block;
     font-size: var(--fs-200);
     margin-top: var(--sp-xsmall);

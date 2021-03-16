@@ -275,7 +275,7 @@ capitalize(bar) =&gt; Bar</code></pre></div><h3 class="item__sub-heading">Links<
 }
 @include pseudo($type: after) {
   ...
-}</code></pre></div><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Reyno te Koppele</p></li></ul></section></section><section class="main__sub-section" id="undefined-css"><h2 class="main__heading--secondary"><div class="container">css</div></h2><section class="main__item container item" id="undefined-css-html"><h3 class="item__heading"><a class="item__name" href="#css-html">html</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>html {
+}</code></pre></div><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[css]</span> <a href="#undefined-css-img"><code>img</code></a></li></ul><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Reyno te Koppele</p></li></ul></section></section><section class="main__sub-section" id="undefined-css"><h2 class="main__heading--secondary"><div class="container">css</div></h2><section class="main__item container item" id="undefined-css-html"><h3 class="item__heading"><a class="item__name" href="#css-html">html</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>html {
   font-size: 14px;
 }</code>" data-collapsed="html { ... }"><code>html { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Apply font-size for rem scaling</p></div><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Reyno te Koppele</p></li></ul></section><section class="main__item container item" id="undefined-css-body"><h3 class="item__heading"><a class="item__name" href="#css-body">body</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>body {
   font-size: var(--fs-300);
@@ -335,14 +335,12 @@ capitalize(bar) =&gt; Bar</code></pre></div><h3 class="item__sub-heading">Links<
   font-weight: var(--fs-300);
   text-align: center;
 
-  &amp;::before {
-    content: &quot;We&#39;re sorry, the image is broken :(&quot;;
+  @include pseudo($content: &quot;We&#39;re sorry, the image is broken :(&quot;) {
     display: block;
     margin-bottom: var(--sp-xsmall);
   }
 
-  &amp;::after {
-    content: &quot;(url: &quot; attr(src) &quot;)&quot;;
+  @include pseudo($type: after, $content: &quot;(url: &quot; attr(src) &quot;)&quot;) {
     display: block;
     font-size: var(--fs-200);
     margin-top: var(--sp-xsmall);
