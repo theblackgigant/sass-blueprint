@@ -95,3 +95,11 @@ a {
     text-decoration: none;
   }
 }
+
+/// Add a style for default"links
+///
+/// @author Reyno te Koppele
+///
+a[href]:not([class]) {
+  color: var(--clr-primary-400);
+}
