@@ -442,13 +442,47 @@ capitalize(bar) =&gt; Bar</code></pre></div><h3 class="item__sub-heading">Links<
   }
 }</code>" data-collapsed=".btn { ... }"><code>.btn { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Class for creating a button or call-to-action button</p></div><h3 class="item__sub-heading">Links</h3><ul class="list-unstyled"><li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/calc()">calc()</a></li></ul><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Reyno te Koppele</p></li></ul></section><section class="main__item container item" id="undefined-css-.grid"><h3 class="item__heading"><a class="item__name" href="#css-.grid">.grid</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>.grid {
   display: grid;
-  grid-template-columns: repeat(var(--column-count, 1), 1fr);
-  gap: var(--sp-small);
+  grid-template-columns: var(--col-template, 1fr);
+  gap: var(--sp-medium);
 
   @include mq(&quot;small&quot;) {
-    --column-count: 3;
+    --col-template: repeat(3, 1fr);
   }
-}</code>" data-collapsed=".grid { ... }"><code>.grid { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Class for creating an evenly spaced grid</p></div><h3 class="item__sub-heading">Links</h3><ul class="list-unstyled"><li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/repeat()">repeat()</a></li></ul><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Reyno te Koppele</p></li></ul></section><section class="main__item container item" id="undefined-css-.sr-only"><h3 class="item__heading"><a class="item__name" href="#css-.sr-only">.sr-only</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>.sr-only {
+
+  &amp;--two-columns {
+    @include mq(&quot;small&quot;) {
+      --col-template: repeat(2, 1fr);
+    }
+  }
+
+  &amp;--four-columns {
+    @include mq(&quot;small&quot;) {
+      --col-template: repeat(2, 1fr);
+    }
+
+    @include mq(&quot;medium&quot;) {
+      --col-template: repeat(4, 1fr);
+    }
+  }
+
+  &amp;--content-side {
+    @include mq(&quot;small&quot;) {
+      --col-template: 3fr 1fr;
+    }
+  }
+
+  &amp;--side-content {
+    @include mq(&quot;small&quot;) {
+      --col-template: 1fr 3fr;
+    }
+  }
+
+  &amp;--side-content-side {
+    @include mq(&quot;small&quot;) {
+      --col-template: 1fr 2fr 1fr;
+    }
+  }
+}</code>" data-collapsed=".grid { ... }"><code>.grid { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Class for creating differently spaced grids</p></div><h3 class="item__sub-heading">Links</h3><ul class="list-unstyled"><li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/repeat()">repeat()</a></li></ul><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Reyno te Koppele</p></li></ul></section><section class="main__item container item" id="undefined-css-.sr-only"><h3 class="item__heading"><a class="item__name" href="#css-.sr-only">.sr-only</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>.sr-only {
   border: 0 !important;
   clip: rect(1px, 1px, 1px, 1px) !important;
   -webkit-clip-path: inset(50%) !important;
