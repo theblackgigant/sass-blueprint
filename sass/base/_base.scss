@@ -103,3 +103,25 @@ a {
 a[href]:not([class]) {
   color: var(--clr-primary-400);
 }
+
+/// Adds more aesthetically-pleasing broken images
+///
+/// @author Reyno te Koppele
+///
+img {
+  font-weight: var(--fs-300);
+  text-align: center;
+
+  &::before {
+    content: "We're sorry, the image is broken :(";
+    display: block;
+    margin-bottom: var(--sp-xsmall);
+  }
+
+  &::after {
+    content: "(url: " attr(src) ")";
+    display: block;
+    font-size: var(--fs-200);
+    margin-top: var(--sp-xsmall);
+  }
+}
