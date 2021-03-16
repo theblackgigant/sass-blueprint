@@ -58,3 +58,20 @@
 
   @return $direct-parent;
 }
+
+/// Capitalize a given string
+///
+/// @example
+///   capitalize(foo) => Foo
+///   capitalize(bar) => Bar
+///
+/// @author Reyno te Koppele
+///
+/// @param {String} $string - String to capitalize
+///
+/// @link https://sass-lang.com/documentation/modules/string#to-upper-case to-upper-case()
+/// @link https://sass-lang.com/documentation/modules/string#slice str-slice()
+///
+@function capitalize($string) {
+  @return to-upper-case(str-slice($string, 1, 1)) + str-slice($string, 2);
+}

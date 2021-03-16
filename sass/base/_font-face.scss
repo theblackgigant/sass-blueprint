@@ -1,3 +1,6 @@
+@use "../abstracts/font" as *;
+@use "../abstracts/functions" as *;
+
 // See https://css-tricks.com/three-techniques-performant-custom-font-usage/
 
 /*
@@ -36,140 +39,43 @@ pyftsubset [input] --unicodes="[unicode-range(s)]" --flavor="[file type]" --outp
 > https://github.com/fonttools/fonttools
 */
 
-// Roboto Light
-@font-face {
-  font-family: Roboto;
-  font-weight: 100;
-  src: local(RobotoLight),
-    local(Roboto-Light),
-    url('../../fonts/roboto/Roboto-Light.woff2') format('woff2'),
-    url('../../fonts/roboto/Roboto-Light.woff') format('woff');
-  font-display: swap;
-  unicode-range: U+0020-007F;
-}
+/// Load fonts subsets from folder
+///
+/// @author Reyno te Koppele
+///
+/// @link https://sass-lang.com/documentation/modules/string#unquote unquote()
+///
+/// @require {function} capitalize
+/// @require {variable} $unicodes
+/// @require {variable} $font-weights
+/// @require {variable} $fonts
+///
+@each $font in $fonts {
+  @each $weight, $font-weight in $font-weights {
+    $font-name: capitalize($font);
+    $weight-name: capitalize($weight);
+    $path: '../../fonts/' + $font + '/' + $font-name + '-' + $weight-name;
+    $local: $font-name;
 
-@font-face {
-  font-family: Roboto;
-  font-weight: 100;
-  src: local(RobotoLight),
-    local(Roboto-Light),
-    url('../../fonts/roboto/Roboto-Light-Extra.woff2') format('woff2'),
-    url('../../fonts/roboto/Roboto-Light-Extra.woff') format('woff');
-  font-display: swap;
-  unicode-range: U+00A0-00FF,U+0100-017F;
-}
+    @if $weight != regular {
+      $local: $font-name + $weight-name;
+    }
 
-// Roboto Regular
-@font-face {
-  font-family: Roboto;
-  font-weight: 400;
-  src: local(Roboto),
-    local(Roboto-Regular),
-    url('../../fonts/roboto/Roboto-Regular.woff2') format('woff2'),
-    url('../../fonts/roboto/Roboto-Regular.woff') format('woff');
-  font-display: swap;
-  unicode-range: U+0020-007F;
-}
+    @each $prop, $unicode in $unicodes {
+      @if $prop != basic {
+        $path: $path + '-' + capitalize($prop);
+      }
 
-@font-face {
-  font-family: Roboto;
-  font-weight: 400;
-  src: local(Roboto),
-    local(Roboto-Regular),
-    url('../../fonts/roboto/Roboto-Regular-Extra.woff2') format('woff2'),
-    url('../../fonts/roboto/Roboto-Regular-Extra.woff') format('woff');
-  font-display: swap;
-  unicode-range: U+00A0-00FF,U+0100-017F;
-}
-
-// Roboto Bold
-@font-face {
-  font-family: Roboto;
-  font-weight: 700;
-  src: local(RobotoBold),
-    local(Roboto-Bold),
-    url('../../fonts/roboto/Roboto-Bold.woff2') format('woff2'),
-    url('../../fonts/roboto/Roboto-Bold.woff') format('woff');
-  font-display: swap;
-  unicode-range: U+0020-007F;
-}
-
-@font-face {
-  font-family: Roboto;
-  font-weight: 700;
-  src: local(RobotoBold),
-    local(Roboto-Bold),
-    url('../../fonts/roboto/Roboto-Bold-Extra.woff2') format('woff2'),
-    url('../../fonts/roboto/Roboto-Bold-Extra.woff') format('woff');
-  font-display: swap;
-  unicode-range: U+00A0-00FF,U+0100-017F;
-}
-
-// Poppins Light
-@font-face {
-  font-family: Poppins;
-  font-weight: 100;
-  src: local(PoppinsLight),
-    local(Poppins-Light),
-    url('../../fonts/poppins/Poppins-Light.woff2') format('woff2'),
-    url('../../fonts/poppins/Poppins-Light.woff') format('woff');
-  font-display: swap;
-  unicode-range: U+0020-007F;
-}
-
-@font-face {
-  font-family: Poppins;
-  font-weight: 100;
-  src: local(PoppinsLight),
-    local(Poppins-Light),
-    url('../../fonts/poppins/Poppins-Light-Extra.woff2') format('woff2'),
-    url('../../fonts/poppins/Poppins-Light-Extra.woff') format('woff');
-  font-display: swap;
-  unicode-range: U+00A0-00FF,U+0100-017F;
-}
-
-// Poppins Regular
-@font-face {
-  font-family: Poppins;
-  font-weight: 400;
-  src: local(Poppins),
-    local(Poppins-Regular),
-    url('../../fonts/poppins/Poppins-Regular.woff2') format('woff2'),
-    url('../../fonts/poppins/Poppins-Regular.woff') format('woff');
-  font-display: swap;
-  unicode-range: U+0020-007F;
-}
-
-@font-face {
-  font-family: Poppins;
-  font-weight: 400;
-  src: local(Poppins),
-    local(Poppins-Regular),
-    url('../../fonts/poppins/Poppins-Regular-Extra.woff2') format('woff2'),
-    url('../../fonts/poppins/Poppins-Regular-Extra.woff') format('woff');
-  font-display: swap;
-  unicode-range: U+00A0-00FF,U+0100-017F;
-}
-
-// Poppins Bold
-@font-face {
-  font-family: Poppins;
-  font-weight: 700;
-  src: local(PoppinsBold),
-    local(Poppins-Bold),
-    url('../../fonts/poppins/Poppins-Bold.woff2') format('woff2'),
-    url('../../fonts/poppins/Poppins-Bold.woff') format('woff');
-  font-display: swap;
-  unicode-range: U+0020-007F;
-}
-
-@font-face {
-  font-family: Poppins;
-  font-weight: 700;
-  src: local(PoppinsBold),
-    local(Poppins-Bold),
-    url('../../fonts/poppins/Poppins-Bold-Extra.woff2') format('woff2'),
-    url('../../fonts/poppins/Poppins-Bold-Extra.woff') format('woff');
-  font-display: swap;
-  unicode-range: U+00A0-00FF,U+0100-017F;
+      @font-face {
+        font-family:  $font-name;
+        src: local($local),
+        local($font-name + '-' + $weight-name),
+        url($path + '.woff2') format('woff2'),
+        url($path + '.woff') format('woff');
+        font-weight: $font-weight;
+        font-display: swap;
+        unicode-range: unquote($unicode);
+      }
+    }
+  }
 }

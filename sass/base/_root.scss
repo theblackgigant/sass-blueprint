@@ -1,4 +1,6 @@
 @use "../abstracts" as *;
+@use "../abstracts/mixins" as *;
+@use "../abstracts/functions" as *;
 
 /// Add CSS variables to the DOM.
 ///

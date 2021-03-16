@@ -1,0 +1,67 @@
+/// Font scaling for our fonts
+///
+/// @author Reyno te Koppele
+///
+/// @type Map
+/// @prop {Number} xs [320px] - Breakpoint for extra small screens
+/// @prop {Number} s [375px] - Breakpoint for small screens
+/// @prop {Number} m [768px] - Breakpoint for medium screens
+/// @prop {Number} l [1024px] - Breakpoint for large screens
+/// @prop {Number} xl [1920px] - Breakpoint for extra large screens
+///
+$font-scale: (
+  small:(
+    200: 0.8rem,
+    300: 1rem,
+    400: 1.125rem,
+    500: 1.563rem,
+    600: 1.953rem,
+    700: 2.441rem,
+    800: 3.052rem
+  ),
+  big:(
+    200: 0.8rem,
+    300: 1rem,
+    400: 1.25rem,
+    500: 2rem,
+    600: 2.827rem,
+    700: 4rem,
+    800: 5.653rem
+  )
+) !default;
+
+/// Unicodes we use for our font files
+///
+/// @author Reyno te Koppele
+///
+/// @type Map
+/// @prop {String} basic [U+0020-007F,U+00A0-00FF] - Unicodes for Basic Latin and Latin-1 Supplement
+/// @prop {String} extra [U+0100-017F,U+20A0-20CF] - Unicodes for Latin Extended-A and Currency Symbols
+///
+$unicodes: (
+  basic: 'U+0020-007F,U+00A0-00FF',
+  extra: 'U+0100-017F,U+20A0-20CF',
+) !default;
+
+/// Font weights we load in
+///
+/// @author Reyno te Koppele
+///
+/// @type Map
+/// @prop {Number} light [100]
+/// @prop {Number} regular [400]
+/// @prop {Number} bold [700]
+///
+$font-weights: (
+  light: 100,
+  regular: 400,
+  bold: 700,
+) !default;
+
+/// Fonts to load in
+///
+/// @author Reyno te Koppele
+///
+/// @type List [(roboto, poppins)] - Comma seperated list of font names
+///
+$fonts: (roboto, poppins) !default;
