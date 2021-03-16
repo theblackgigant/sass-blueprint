@@ -1,6 +1,6 @@
 @use "../abstracts/mixins" as *;
 
-/// Class for creating an evenly spaced grid
+/// Class for creating differently spaced grids
 ///
 /// @author Reyno te Koppele
 ///
@@ -10,10 +10,44 @@
 ///
 .grid {
   display: grid;
-  grid-template-columns: repeat(var(--column-count, 1), 1fr);
-  gap: var(--sp-small);
+  grid-template-columns: var(--col-template, 1fr);
+  gap: var(--sp-medium);
 
   @include mq("small") {
-    --column-count: 3;
+    --col-template: repeat(3, 1fr);
+  }
+
+  &--two-columns {
+    @include mq("small") {
+      --col-template: repeat(2, 1fr);
+    }
+  }
+
+  &--four-columns {
+    @include mq("small") {
+      --col-template: repeat(2, 1fr);
+    }
+
+    @include mq("medium") {
+      --col-template: repeat(4, 1fr);
+    }
+  }
+
+  &--content-side {
+    @include mq("small") {
+      --col-template: 3fr 1fr;
+    }
+  }
+
+  &--side-content {
+    @include mq("small") {
+      --col-template: 1fr 3fr;
+    }
+  }
+
+  &--side-content-side {
+    @include mq("small") {
+      --col-template: 1fr 2fr 1fr;
+    }
   }
 }
