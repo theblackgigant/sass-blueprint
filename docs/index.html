@@ -415,13 +415,17 @@ capitalize(bar) =&gt; Bar</code></pre></div><h3 class="item__sub-heading">Links<
   @extend %flex--center;
   background: none;
   border: var(--border-size, 1px) var(--border-style) var(--clr-neutral-900);
+  outline: var(--outline-size, 0px) var(--border-style) var(--clr-neutral-900);
   color: var(--clr-neutral-900);
   cursor: pointer;
-  outline: 0;
   padding: calc(var(--sp-xsmall-em) - var(--border-size, 1px))
     calc(var(--sp-medium-em) - var(--border-size, 1px));
   transition: background-color var(--timing-fast) var(--easing),
     color var(--timing-fast) var(--easing);
+
+  &amp;:visited {
+    color: var(--clr-neutral-900);
+  }
 
   &amp;:hover,
   &amp;:focus {
@@ -435,50 +439,101 @@ capitalize(bar) =&gt; Bar</code></pre></div><h3 class="item__sub-heading">Links<
     color: var(--clr-neutral-100);
     background: var(--clr-cta-400);
 
+    &amp;:visited {
+      color: var(--clr-neutral-100);
+    }
+
     &amp;:hover,
     &amp;:focus {
       background: var(--clr-neutral-900);
     }
   }
-}</code>" data-collapsed=".btn { ... }"><code>.btn { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Class for creating a button or call-to-action button</p></div><h3 class="item__sub-heading">Links</h3><ul class="list-unstyled"><li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/calc()">calc()</a></li></ul><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Reyno te Koppele</p></li></ul></section><section class="main__item container item" id="undefined-css-.grid"><h3 class="item__heading"><a class="item__name" href="#css-.grid">.grid</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>.grid {
+
+  &amp;--inset {
+    --border-size: 2px;
+    --outline-size: var(--border-size);
+    outline-offset: calc(var(--outline-size) * -1);
+    transition: outline-offset var(--timing-fast) var(--easing);
+
+    &amp;:hover,
+    &amp;:focus {
+      background: none;
+      color: inherit;
+      outline-offset: calc(var(--outline-size) * -3);
+    }
+  }
+
+  &amp;--inset-inverted {
+    --border-size: 0px;
+    --outline-size: 2px;
+    background: var(--clr-secondary-400);
+    color: var(--clr-neutral-100);
+    outline-color: var(--clr-neutral-100);
+    outline-offset: 0;
+    transition: outline-offset var(--timing-fast) var(--easing);
+
+    &amp;:visited {
+      color: var(--clr-neutral-100);
+    }
+
+    &amp;:hover,
+    &amp;:focus {
+      background: var(--clr-secondary-400);
+      outline-offset: calc(var(--outline-size) * -3);
+    }
+  }
+
+  &amp;--slide {
+    position: relative;
+
+    @include pseudo {
+      @extend %absolute;
+      @extend %absolute--full;
+      background: var(--clr-secondary-400);
+      max-width: 0;
+      transition: max-width var(--timing-fast) var(--easing),
+        color var(--timing-fast) var(--easing);
+      z-index: -1;
+    }
+
+    &amp;:hover,
+    &amp;:focus {
+      background: none;
+
+      @include pseudo {
+        max-width: 100%;
+      }
+    }
+  }
+}</code>" data-collapsed=".btn { ... }"><code>.btn { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Class for creating different looking buttons</p></div><h3 class="item__sub-heading">Links</h3><ul class="list-unstyled"><li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/calc()">calc()</a></li></ul><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Reyno te Koppele</p></li></ul></section><section class="main__item container item" id="undefined-css-.grid"><h3 class="item__heading"><a class="item__name" href="#css-.grid">.grid</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>.grid {
   display: grid;
   grid-template-columns: var(--col-template, 1fr);
   gap: var(--sp-medium);
 
-  @include mq(&quot;small&quot;) {
+  @include mq(&#39;small&#39;) {
     --col-template: repeat(3, 1fr);
-  }
 
-  &amp;--two-columns {
-    @include mq(&quot;small&quot;) {
-      --col-template: repeat(2, 1fr);
-    }
-  }
-
-  &amp;--four-columns {
-    @include mq(&quot;small&quot;) {
+    &amp;--two-columns {
       --col-template: repeat(2, 1fr);
     }
 
-    @include mq(&quot;medium&quot;) {
-      --col-template: repeat(4, 1fr);
-    }
-  }
+    &amp;--four-columns {
+      --col-template: repeat(2, 1fr);
 
-  &amp;--content-side {
-    @include mq(&quot;small&quot;) {
+      @include mq(&#39;medium&#39;) {
+        --col-template: repeat(4, 1fr);
+      }
+    }
+
+    &amp;--content-side {
       --col-template: 3fr 1fr;
     }
-  }
 
-  &amp;--side-content {
-    @include mq(&quot;small&quot;) {
+    &amp;--side-content {
       --col-template: 1fr 3fr;
     }
-  }
 
-  &amp;--side-content-side {
-    @include mq(&quot;small&quot;) {
+    &amp;--side-content-side {
       --col-template: 1fr 2fr 1fr;
     }
   }
@@ -533,4 +588,4 @@ capitalize(bar) =&gt; Bar</code></pre></div><h3 class="item__sub-heading">Links<
   @extend %absolute;
   @extend %absolute--full;
   ...
-}</code></pre></div><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Reyno te Koppele</p></li></ul></section></section></section><footer class="footer" role="contentinfo"><div class="container"><div class="footer__project-info project-info"><!-- Name and URL --> <span class="project-info__name">Sass-blueprint</span><!-- Version --> <span class="project-info__version">- v1.0.0</span><!-- License --> <span class="project-info__license">, under MIT</span></div><a class="footer__watermark" href="http://sassdoc.com"><img src="assets/images/logo_light_inline.svg" alt="SassDoc Logo"></a></div></footer></article><script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script><script>window.jQuery || document.write('<script src="assets/js/vendor/jquery.min.js"><\/script>')</script><script src="assets/js/main.min.js"></script></body></html>
+}</code></pre></div><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[css]</span> <a href="#undefined-css-.btn"><code>.btn</code></a></li></ul><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Reyno te Koppele</p></li></ul></section></section></section><footer class="footer" role="contentinfo"><div class="container"><div class="footer__project-info project-info"><!-- Name and URL --> <span class="project-info__name">Sass-blueprint</span><!-- Version --> <span class="project-info__version">- v1.0.0</span><!-- License --> <span class="project-info__license">, under MIT</span></div><a class="footer__watermark" href="http://sassdoc.com"><img src="assets/images/logo_light_inline.svg" alt="SassDoc Logo"></a></div></footer></article><script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script><script>window.jQuery || document.write('<script src="assets/js/vendor/jquery.min.js"><\/script>')</script><script src="assets/js/main.min.js"></script></body></html>

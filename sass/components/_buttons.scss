@@ -1,11 +1,12 @@
 @use "../abstracts/mixins" as *;
 @use "../utilities/placeholders";
 
-/// Class for creating a button or call-to-action button
+/// Class for creating different looking buttons
 ///
 /// @author Reyno te Koppele
 ///
 /// @require {placeholder} %flex
+/// @require {placeholder} %absolute
 ///
 /// @link https://developer.mozilla.org/en-US/docs/Web/CSS/calc() calc()
 ///
