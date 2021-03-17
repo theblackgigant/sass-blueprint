@@ -3,6 +3,7 @@
 /// Apply font-size for rem scaling
 ///
 /// @author Reyno te Koppele
+/// @group Base
 ///
 html {
   font-size: 14px;
@@ -11,6 +12,7 @@ html {
 /// Apply color and font settings for general text
 ///
 /// @author Reyno te Koppele
+/// @group Base
 ///
 body {
   font-size: var(--fs-300);
@@ -21,8 +23,12 @@ body {
 /// Apply color and font settings for headings
 ///
 /// @author Reyno te Koppele
+/// @group Base
 ///
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   font-family: var(--font-stack-heading);
   font-weight: 700;
   line-height: 1.1;
@@ -32,6 +38,7 @@ h1, h2, h3, h4 {
 /// Apply font-size from abstracts/_font-scale
 ///
 /// @author Reyno te Koppele
+/// @group Base
 ///
 /// @see {variable} $font-scale
 ///
@@ -43,6 +50,7 @@ h1,
 /// Apply font-size from abstracts/_font-scale
 ///
 /// @author Reyno te Koppele
+/// @group Base
 ///
 /// @see {variable} $font-scale
 ///
@@ -54,6 +62,7 @@ h2,
 /// Apply font-size from abstracts/_font-scale
 ///
 /// @author Reyno te Koppele
+/// @group Base
 ///
 /// @see {variable} $font-scale
 ///
@@ -65,6 +74,7 @@ h3,
 /// Apply font-size from abstracts/_font-scale
 ///
 /// @author Reyno te Koppele
+/// @group Base
 ///
 /// @see {variable} $font-scale
 ///
@@ -76,6 +86,7 @@ h4,
 /// Apply font-size from abstracts/_font-scale
 ///
 /// @author Reyno te Koppele
+/// @group Base
 ///
 /// @see {variable} $font-scale
 ///
@@ -87,6 +98,7 @@ small,
 /// Ignore default browser styling on all links
 ///
 /// @author Reyno te Koppele
+/// @group Base
 ///
 a {
   color: inherit;
@@ -101,6 +113,7 @@ a {
 /// Add a style for default"links
 ///
 /// @author Reyno te Koppele
+/// @group Base
 ///
 a[href]:not([class]) {
   color: var(--clr-primary-400);
@@ -109,6 +122,7 @@ a[href]:not([class]) {
 /// Add more aesthetically-pleasing broken images
 ///
 /// @author Reyno te Koppele
+/// @group Base
 ///
 /// @require {mixin} pseudo
 ///
@@ -121,7 +135,7 @@ img {
     margin-bottom: var(--sp-xsmall);
   }
 
-  @include pseudo($type: after, $content: "(url: " attr(src) ")") {
+  @include pseudo($type: after, $content: '(url: ' attr(src) ')') {
     display: block;
     font-size: var(--fs-200);
     margin-top: var(--sp-xsmall);
