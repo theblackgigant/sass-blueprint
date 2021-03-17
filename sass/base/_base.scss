@@ -141,3 +141,32 @@ img {
     margin-top: var(--sp-xsmall);
   }
 }
+
+/// Adds default styling to input elements
+///
+/// @author Reyno te Koppele
+/// @group Base
+///
+/// @require {mixin} pseudo
+///
+input:not([type='button'], [type='submit'], [type='color'], [type='checkbox'], [type='radio']),
+textarea {
+  display: block;
+  width: 100%;
+  padding: var(--sp-xsmall) var(--sp-small);
+  color: var(--clr-neutral-800);
+  outline: 0;
+  background: var(--clr-neutral-100);
+  background-clip: padding-box;
+  border: var(--border);
+  transition: border-color var(--timing-fast) var(--easing);
+
+  &::placeholder {
+    color: var(--clr-neutral-600);
+    opacity: 1;
+  }
+
+  &:focus {
+    border-color: var(--clr-neutral-600);
+  }
+}
