@@ -13,40 +13,30 @@
   grid-template-columns: var(--col-template, 1fr);
   gap: var(--sp-medium);
 
-  @include mq("small") {
+  @include mq('small') {
     --col-template: repeat(3, 1fr);
-  }
 
-  &--two-columns {
-    @include mq("small") {
-      --col-template: repeat(2, 1fr);
-    }
-  }
-
-  &--four-columns {
-    @include mq("small") {
+    &--two-columns {
       --col-template: repeat(2, 1fr);
     }
 
-    @include mq("medium") {
-      --col-template: repeat(4, 1fr);
-    }
-  }
+    &--four-columns {
+      --col-template: repeat(2, 1fr);
 
-  &--content-side {
-    @include mq("small") {
+      @include mq('medium') {
+        --col-template: repeat(4, 1fr);
+      }
+    }
+
+    &--content-side {
       --col-template: 3fr 1fr;
     }
-  }
 
-  &--side-content {
-    @include mq("small") {
+    &--side-content {
       --col-template: 1fr 3fr;
     }
-  }
 
-  &--side-content-side {
-    @include mq("small") {
+    &--side-content-side {
       --col-template: 1fr 2fr 1fr;
     }
   }
