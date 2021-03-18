@@ -1,11 +1,13 @@
 @use "../abstracts/mixins" as *;
 @use "../utilities/placeholders";
 
-/// Class for creating a button or call-to-action button
+/// Class for creating different looking buttons
 ///
 /// @author Reyno te Koppele
+/// @group Components
 ///
 /// @require {placeholder} %flex
+/// @require {placeholder} %absolute
 ///
 /// @link https://developer.mozilla.org/en-US/docs/Web/CSS/calc() calc()
 ///
@@ -14,13 +16,17 @@
   @extend %flex--center;
   background: none;
   border: var(--border-size, 1px) var(--border-style) var(--clr-neutral-900);
+  outline: var(--outline-size, 0px) var(--border-style) var(--clr-neutral-900);
   color: var(--clr-neutral-900);
   cursor: pointer;
-  outline: 0;
   padding: calc(var(--sp-xsmall-em) - var(--border-size, 1px))
     calc(var(--sp-medium-em) - var(--border-size, 1px));
   transition: background-color var(--timing-fast) var(--easing),
     color var(--timing-fast) var(--easing);
+
+  &:visited {
+    color: var(--clr-neutral-900);
+  }
 
   &:hover,
   &:focus {
@@ -34,9 +40,70 @@
     color: var(--clr-neutral-100);
     background: var(--clr-cta-400);
 
+    &:visited {
+      color: var(--clr-neutral-100);
+    }
+
     &:hover,
     &:focus {
       background: var(--clr-neutral-900);
+    }
+  }
+
+  &--inset {
+    --border-size: 2px;
+    --outline-size: var(--border-size);
+    outline-offset: calc(var(--outline-size) * -1);
+    transition: outline-offset var(--timing-fast) var(--easing);
+
+    &:hover,
+    &:focus {
+      background: none;
+      color: inherit;
+      outline-offset: calc(var(--outline-size) * -3);
+    }
+  }
+
+  &--inset-inverted {
+    --border-size: 0px;
+    --outline-size: 2px;
+    background: var(--clr-secondary-400);
+    color: var(--clr-neutral-100);
+    outline-color: var(--clr-neutral-100);
+    outline-offset: 0;
+    transition: outline-offset var(--timing-fast) var(--easing);
+
+    &:visited {
+      color: var(--clr-neutral-100);
+    }
+
+    &:hover,
+    &:focus {
+      background: var(--clr-secondary-400);
+      outline-offset: calc(var(--outline-size) * -3);
+    }
+  }
+
+  &--slide {
+    position: relative;
+
+    @include pseudo {
+      @extend %absolute;
+      @extend %absolute--full;
+      background: var(--clr-secondary-400);
+      max-width: 0;
+      transition: max-width var(--timing-fast) var(--easing),
+        color var(--timing-fast) var(--easing);
+      z-index: -1;
+    }
+
+    &:hover,
+    &:focus {
+      background: none;
+
+      @include pseudo {
+        max-width: 100%;
+      }
     }
   }
 }

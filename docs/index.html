@@ -1,5 +1,21 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8"><title>Sass-blueprint - v1.0.0</title><link rel="stylesheet" href="assets/css/main.css"><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,500,700" rel="stylesheet" type="text/css"><meta name="viewport" content="width=device-width"><meta content="IE=edge, chrome=1" http-equiv="X-UA-Compatible"><!-- Open Graph tags --><meta property="og:title" content="Sass-blueprint - SassDoc"><meta property="og:type" content="website"><meta property="og:description" content="<p>Basic folder structure for your Sass project</p>
-"><!-- Thanks to Sass-lang.com for the icons --><link href="assets/images/favicon.png" rel="shortcut icon"></head><body><aside class="sidebar" role="nav"><div class="sidebar__header"><h1 class="sidebar__title">Sass-blueprint - 1.0.0</h1></div><div class="sidebar__body"><button type="button" class="btn-toggle js-btn-toggle" data-alt="Open all">Close all</button><p class="sidebar__item sidebar__item--heading" data-slug="reset"><a href="#reset">reset</a></p><div><p class="sidebar__item sidebar__item--sub-heading" data-slug="reset-css"><a href="#reset-css">css</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-group="reset" data-name="*,
+"><!-- Thanks to Sass-lang.com for the icons --><link href="assets/images/favicon.png" rel="shortcut icon"></head><body><aside class="sidebar" role="nav"><div class="sidebar__header"><h1 class="sidebar__title">Sass-blueprint - 1.0.0</h1></div><div class="sidebar__body"><button type="button" class="btn-toggle js-btn-toggle" data-alt="Open all">Close all</button><p class="sidebar__item sidebar__item--heading" data-slug="base"><a href="#base">base</a></p><div><p class="sidebar__item sidebar__item--sub-heading" data-slug="base-css"><a href="#base-css">css</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-group="base" data-name="html" data-type="css"><a href="#base-css-html">html</a></li><li class="sidebar__item sassdoc__item" data-group="base" data-name="body" data-type="css"><a href="#base-css-body">body</a></li><li class="sidebar__item sassdoc__item" data-group="base" data-name="h1,
+h2,
+h3,
+h4" data-type="css"><a href="#base-css-h1,
+h2,
+h3,
+h4">h1, h2, h3, h4</a></li><li class="sidebar__item sassdoc__item" data-group="base" data-name="h1,
+.h1" data-type="css"><a href="#base-css-h1,
+.h1">h1, .h1</a></li><li class="sidebar__item sassdoc__item" data-group="base" data-name="h2,
+.h2" data-type="css"><a href="#base-css-h2,
+.h2">h2, .h2</a></li><li class="sidebar__item sassdoc__item" data-group="base" data-name="h3,
+.h3" data-type="css"><a href="#base-css-h3,
+.h3">h3, .h3</a></li><li class="sidebar__item sassdoc__item" data-group="base" data-name="h4,
+.h4" data-type="css"><a href="#base-css-h4,
+.h4">h4, .h4</a></li><li class="sidebar__item sassdoc__item" data-group="base" data-name="small,
+.text-small" data-type="css"><a href="#base-css-small,
+.text-small">small, .text-small</a></li><li class="sidebar__item sassdoc__item" data-group="base" data-name="a" data-type="css"><a href="#base-css-a">a</a></li><li class="sidebar__item sassdoc__item" data-group="base" data-name="a[href]:not([class])" data-type="css"><a href="#base-css-a[href]:not([class])">a[href]:not([class])</a></li><li class="sidebar__item sassdoc__item" data-group="base" data-name="img" data-type="css"><a href="#base-css-img">img</a></li></ul></div><p class="sidebar__item sidebar__item--heading" data-slug="components"><a href="#components">components</a></p><div><p class="sidebar__item sidebar__item--sub-heading" data-slug="components-css"><a href="#components-css">css</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-group="components" data-name=".btn" data-type="css"><a href="#components-css-.btn">.btn</a></li><li class="sidebar__item sassdoc__item" data-group="components" data-name=".grid" data-type="css"><a href="#components-css-.grid">.grid</a></li></ul></div><p class="sidebar__item sidebar__item--heading" data-slug="reset"><a href="#reset">reset</a></p><div><p class="sidebar__item sidebar__item--sub-heading" data-slug="reset-css"><a href="#reset-css">css</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-group="reset" data-name="*,
 *::before,
 *::after" data-type="css"><a href="#reset-css-*,
 *::before,
@@ -35,17 +51,219 @@ textarea,
 select" data-type="css"><a href="#reset-css-input,
 button,
 textarea,
-select">input, button, textarea, select</a></li></ul></div><p class="sidebar__item sidebar__item--heading" data-slug="undefined"><a href="#undefined">General</a></p><div><p class="sidebar__item sidebar__item--sub-heading" data-slug="undefined-variable"><a href="#undefined-variable">variables</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="breakpoints" data-type="variable"><a href="#undefined-variable-breakpoints">breakpoints</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="primary-colors" data-type="variable"><a href="#undefined-variable-primary-colors">primary-colors</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="secondary-colors" data-type="variable"><a href="#undefined-variable-secondary-colors">secondary-colors</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="cta-colors" data-type="variable"><a href="#undefined-variable-cta-colors">cta-colors</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="neutral-colors" data-type="variable"><a href="#undefined-variable-neutral-colors">neutral-colors</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="colors" data-type="variable"><a href="#undefined-variable-colors">colors</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="font-scale" data-type="variable"><a href="#undefined-variable-font-scale">font-scale</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="unicodes" data-type="variable"><a href="#undefined-variable-unicodes">unicodes</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="font-weights" data-type="variable"><a href="#undefined-variable-font-weights">font-weights</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="fonts" data-type="variable"><a href="#undefined-variable-fonts">fonts</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="rem-spacing" data-type="variable"><a href="#undefined-variable-rem-spacing">rem-spacing</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="em-spacing" data-type="variable"><a href="#undefined-variable-em-spacing">em-spacing</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="spacing" data-type="variable"><a href="#undefined-variable-spacing">spacing</a></li></ul><p class="sidebar__item sidebar__item--sub-heading" data-slug="undefined-function"><a href="#undefined-function">functions</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="colorToRGB" data-type="function"><a href="#undefined-function-colorToRGB">colorToRGB</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="pxToRem" data-type="function"><a href="#undefined-function-pxToRem">pxToRem</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="getDirectParent" data-type="function"><a href="#undefined-function-getDirectParent">getDirectParent</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="capitalize" data-type="function"><a href="#undefined-function-capitalize">capitalize</a></li></ul><p class="sidebar__item sidebar__item--sub-heading" data-slug="undefined-mixin"><a href="#undefined-mixin">mixins</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="mq" data-type="mixin"><a href="#undefined-mixin-mq">mq</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="pseudo" data-type="mixin"><a href="#undefined-mixin-pseudo">pseudo</a></li></ul><p class="sidebar__item sidebar__item--sub-heading" data-slug="undefined-css"><a href="#undefined-css">css</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="html" data-type="css"><a href="#undefined-css-html">html</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="body" data-type="css"><a href="#undefined-css-body">body</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="h1, h2, h3, h4" data-type="css"><a href="#undefined-css-h1, h2, h3, h4">h1, h2, h3, h4</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="h1,
-.h1" data-type="css"><a href="#undefined-css-h1,
-.h1">h1, .h1</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="h2,
-.h2" data-type="css"><a href="#undefined-css-h2,
-.h2">h2, .h2</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="h3,
-.h3" data-type="css"><a href="#undefined-css-h3,
-.h3">h3, .h3</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="h4,
-.h4" data-type="css"><a href="#undefined-css-h4,
-.h4">h4, .h4</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="small,
-.text-small" data-type="css"><a href="#undefined-css-small,
-.text-small">small, .text-small</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="a" data-type="css"><a href="#undefined-css-a">a</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="a[href]:not([class])" data-type="css"><a href="#undefined-css-a[href]:not([class])">a[href]:not([class])</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="img" data-type="css"><a href="#undefined-css-img">img</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name=":root" data-type="css"><a href="#undefined-css-:root">:root</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name=".btn" data-type="css"><a href="#undefined-css-.btn">.btn</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name=".grid" data-type="css"><a href="#undefined-css-.grid">.grid</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name=".sr-only" data-type="css"><a href="#undefined-css-.sr-only">.sr-only</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name=".wrap" data-type="css"><a href="#undefined-css-.wrap">.wrap</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name=".wysiwyg &gt; * + *" data-type="css"><a href="#undefined-css-.wysiwyg &gt; * + *">.wysiwyg &gt; * + *</a></li></ul><p class="sidebar__item sidebar__item--sub-heading" data-slug="undefined-placeholder"><a href="#undefined-placeholder">placeholders</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="flex" data-type="placeholder"><a href="#undefined-placeholder-flex">flex</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="absolute" data-type="placeholder"><a href="#undefined-placeholder-absolute">absolute</a></li></ul></div></div></aside><article class="main" role="main"><header class="header" role="banner"><div class="container"><div class="sassdoc__searchbar searchbar"><label for="js-search-input" class="visually-hidden">Search</label><div class="searchbar__form" id="js-search"><input name="search" type="search" class="searchbar__field" autocomplete="off" autofocus id="js-search-input" placeholder="Search"><ul class="searchbar__suggestions" id="js-search-suggestions"></ul></div></div></div></header><section class="main__section"><h1 class="main__heading" id="reset"><div class="container">reset</div></h1><section class="main__sub-section" id="reset-css"><h2 class="main__heading--secondary"><div class="container">css</div></h2><section class="main__item container item" id="reset-css-*,
+select">input, button, textarea, select</a></li></ul></div><p class="sidebar__item sidebar__item--heading" data-slug="undefined"><a href="#undefined">General</a></p><div><p class="sidebar__item sidebar__item--sub-heading" data-slug="undefined-variable"><a href="#undefined-variable">variables</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="breakpoints" data-type="variable"><a href="#undefined-variable-breakpoints">breakpoints</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="primary-colors" data-type="variable"><a href="#undefined-variable-primary-colors">primary-colors</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="secondary-colors" data-type="variable"><a href="#undefined-variable-secondary-colors">secondary-colors</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="cta-colors" data-type="variable"><a href="#undefined-variable-cta-colors">cta-colors</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="neutral-colors" data-type="variable"><a href="#undefined-variable-neutral-colors">neutral-colors</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="colors" data-type="variable"><a href="#undefined-variable-colors">colors</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="font-scale" data-type="variable"><a href="#undefined-variable-font-scale">font-scale</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="unicodes" data-type="variable"><a href="#undefined-variable-unicodes">unicodes</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="font-weights" data-type="variable"><a href="#undefined-variable-font-weights">font-weights</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="fonts" data-type="variable"><a href="#undefined-variable-fonts">fonts</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="rem-spacing" data-type="variable"><a href="#undefined-variable-rem-spacing">rem-spacing</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="em-spacing" data-type="variable"><a href="#undefined-variable-em-spacing">em-spacing</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="spacing" data-type="variable"><a href="#undefined-variable-spacing">spacing</a></li></ul><p class="sidebar__item sidebar__item--sub-heading" data-slug="undefined-function"><a href="#undefined-function">functions</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="colorToRGB" data-type="function"><a href="#undefined-function-colorToRGB">colorToRGB</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="pxToRem" data-type="function"><a href="#undefined-function-pxToRem">pxToRem</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="getDirectParent" data-type="function"><a href="#undefined-function-getDirectParent">getDirectParent</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="capitalize" data-type="function"><a href="#undefined-function-capitalize">capitalize</a></li></ul><p class="sidebar__item sidebar__item--sub-heading" data-slug="undefined-mixin"><a href="#undefined-mixin">mixins</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="mq" data-type="mixin"><a href="#undefined-mixin-mq">mq</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="pseudo" data-type="mixin"><a href="#undefined-mixin-pseudo">pseudo</a></li></ul><p class="sidebar__item sidebar__item--sub-heading" data-slug="undefined-css"><a href="#undefined-css">css</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-group="undefined" data-name=":root" data-type="css"><a href="#undefined-css-:root">:root</a></li></ul><p class="sidebar__item sidebar__item--sub-heading" data-slug="undefined-placeholder"><a href="#undefined-placeholder">placeholders</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="flex" data-type="placeholder"><a href="#undefined-placeholder-flex">flex</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="absolute" data-type="placeholder"><a href="#undefined-placeholder-absolute">absolute</a></li></ul></div><p class="sidebar__item sidebar__item--heading" data-slug="utilities"><a href="#utilities">utilities</a></p><div><p class="sidebar__item sidebar__item--sub-heading" data-slug="utilities-css"><a href="#utilities-css">css</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-group="utilities" data-name=".sr-only" data-type="css"><a href="#utilities-css-.sr-only">.sr-only</a></li><li class="sidebar__item sassdoc__item" data-group="utilities" data-name=".wrap" data-type="css"><a href="#utilities-css-.wrap">.wrap</a></li><li class="sidebar__item sassdoc__item" data-group="utilities" data-name=".wysiwyg &gt; * + *" data-type="css"><a href="#utilities-css-.wysiwyg &gt; * + *">.wysiwyg &gt; * + *</a></li></ul></div></div></aside><article class="main" role="main"><header class="header" role="banner"><div class="container"><div class="sassdoc__searchbar searchbar"><label for="js-search-input" class="visually-hidden">Search</label><div class="searchbar__form" id="js-search"><input name="search" type="search" class="searchbar__field" autocomplete="off" autofocus id="js-search-input" placeholder="Search"><ul class="searchbar__suggestions" id="js-search-suggestions"></ul></div></div></div></header><section class="main__section"><h1 class="main__heading" id="base"><div class="container">base</div></h1><section class="main__sub-section" id="base-css"><h2 class="main__heading--secondary"><div class="container">css</div></h2><section class="main__item container item" id="base-css-html"><h3 class="item__heading"><a class="item__name" href="#css-html">html</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>html {
+  font-size: 14px;
+}</code>" data-collapsed="html { ... }"><code>html { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Apply font-size for rem scaling</p></div><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Reyno te Koppele</p></li></ul></section><section class="main__item container item" id="base-css-body"><h3 class="item__heading"><a class="item__name" href="#css-body">body</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>body {
+  font-size: var(--fs-300);
+  font-family: var(--font-stack-body);
+  color: var(--clr-neutral-800);
+}</code>" data-collapsed="body { ... }"><code>body { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Apply color and font settings for general text</p></div><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Reyno te Koppele</p></li></ul></section><section class="main__item container item" id="base-css-h1,
+h2,
+h3,
+h4"><h3 class="item__heading"><a class="item__name" href="#css-h1,
+h2,
+h3,
+h4">h1, h2, h3, h4</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-stack-heading);
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--clr, var(--clr-neutral-900));
+}</code>" data-collapsed="h1,
+h2,
+h3,
+h4 { ... }"><code>h1,
+h2,
+h3,
+h4 { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Apply color and font settings for headings</p></div><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Reyno te Koppele</p></li></ul></section><section class="main__item container item" id="base-css-h1,
+.h1"><h3 class="item__heading"><a class="item__name" href="#css-h1,
+.h1">h1, .h1</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>h1,
+.h1 {
+  font-size: var(--fs-800);
+}</code>" data-collapsed="h1,
+.h1 { ... }"><code>h1,
+.h1 { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Apply font-size from abstracts/_font-scale</p></div><h3 class="item__sub-heading">See</h3><ul class="list-unstyled"><li><span class="item__cross-type">[variable]</span> <a href="#variable-font-scale"><code>font-scale</code></a></li></ul><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Reyno te Koppele</p></li></ul></section><section class="main__item container item" id="base-css-h2,
+.h2"><h3 class="item__heading"><a class="item__name" href="#css-h2,
+.h2">h2, .h2</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>h2,
+.h2 {
+  font-size: var(--fs-700);
+}</code>" data-collapsed="h2,
+.h2 { ... }"><code>h2,
+.h2 { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Apply font-size from abstracts/_font-scale</p></div><h3 class="item__sub-heading">See</h3><ul class="list-unstyled"><li><span class="item__cross-type">[variable]</span> <a href="#variable-font-scale"><code>font-scale</code></a></li></ul><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Reyno te Koppele</p></li></ul></section><section class="main__item container item" id="base-css-h3,
+.h3"><h3 class="item__heading"><a class="item__name" href="#css-h3,
+.h3">h3, .h3</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>h3,
+.h3 {
+  font-size: var(--fs-600);
+}</code>" data-collapsed="h3,
+.h3 { ... }"><code>h3,
+.h3 { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Apply font-size from abstracts/_font-scale</p></div><h3 class="item__sub-heading">See</h3><ul class="list-unstyled"><li><span class="item__cross-type">[variable]</span> <a href="#variable-font-scale"><code>font-scale</code></a></li></ul><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Reyno te Koppele</p></li></ul></section><section class="main__item container item" id="base-css-h4,
+.h4"><h3 class="item__heading"><a class="item__name" href="#css-h4,
+.h4">h4, .h4</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>h4,
+.h4 {
+  font-size: var(--fs-500);
+}</code>" data-collapsed="h4,
+.h4 { ... }"><code>h4,
+.h4 { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Apply font-size from abstracts/_font-scale</p></div><h3 class="item__sub-heading">See</h3><ul class="list-unstyled"><li><span class="item__cross-type">[variable]</span> <a href="#variable-font-scale"><code>font-scale</code></a></li></ul><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Reyno te Koppele</p></li></ul></section><section class="main__item container item" id="base-css-small,
+.text-small"><h3 class="item__heading"><a class="item__name" href="#css-small,
+.text-small">small, .text-small</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>small,
+.text-small {
+  font-size: var(--fs-200);
+}</code>" data-collapsed="small,
+.text-small { ... }"><code>small,
+.text-small { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Apply font-size from abstracts/_font-scale</p></div><h3 class="item__sub-heading">See</h3><ul class="list-unstyled"><li><span class="item__cross-type">[variable]</span> <a href="#variable-font-scale"><code>font-scale</code></a></li></ul><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Reyno te Koppele</p></li></ul></section><section class="main__item container item" id="base-css-a"><h3 class="item__heading"><a class="item__name" href="#css-a">a</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>a {
+  color: inherit;
+  text-decoration: none;
+
+  &amp;:visited {
+    color: inherit;
+    text-decoration: none;
+  }
+}</code>" data-collapsed="a { ... }"><code>a { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Ignore default browser styling on all links</p></div><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Reyno te Koppele</p></li></ul></section><section class="main__item container item" id="base-css-a[href]:not([class])"><h3 class="item__heading"><a class="item__name" href="#css-a[href]:not([class])">a[href]:not([class])</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>a[href]:not([class]) {
+  color: var(--clr-primary-400);
+}</code>" data-collapsed="a[href]:not([class]) { ... }"><code>a[href]:not([class]) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Add a style for default&quot;links</p></div><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Reyno te Koppele</p></li></ul></section><section class="main__item container item" id="base-css-img"><h3 class="item__heading"><a class="item__name" href="#css-img">img</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>img {
+  font-weight: var(--fs-300);
+  text-align: center;
+
+  @include pseudo($content: &quot;We&#39;re sorry, the image is broken :(&quot;) {
+    display: block;
+    margin-bottom: var(--sp-xsmall);
+  }
+
+  @include pseudo($type: after, $content: &#39;(url: &#39; attr(src) &#39;)&#39;) {
+    display: block;
+    font-size: var(--fs-200);
+    margin-top: var(--sp-xsmall);
+  }
+}</code>" data-collapsed="img { ... }"><code>img { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Add more aesthetically-pleasing broken images</p></div><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Reyno te Koppele</p></li></ul></section></section></section><section class="main__section"><h1 class="main__heading" id="components"><div class="container">components</div></h1><section class="main__sub-section" id="components-css"><h2 class="main__heading--secondary"><div class="container">css</div></h2><section class="main__item container item" id="components-css-.btn"><h3 class="item__heading"><a class="item__name" href="#css-.btn">.btn</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>.btn {
+  display: inline-flex;
+  @extend %flex--center;
+  background: none;
+  border: var(--border-size, 1px) var(--border-style) var(--clr-neutral-900);
+  outline: var(--outline-size, 0px) var(--border-style) var(--clr-neutral-900);
+  color: var(--clr-neutral-900);
+  cursor: pointer;
+  padding: calc(var(--sp-xsmall-em) - var(--border-size, 1px))
+    calc(var(--sp-medium-em) - var(--border-size, 1px));
+  transition: background-color var(--timing-fast) var(--easing),
+    color var(--timing-fast) var(--easing);
+
+  &amp;:visited {
+    color: var(--clr-neutral-900);
+  }
+
+  &amp;:hover,
+  &amp;:focus {
+    background: var(--clr-neutral-900);
+    color: var(--clr-neutral-100);
+  }
+
+  &amp;--cta {
+    --border-size: 0px;
+    border: none;
+    color: var(--clr-neutral-100);
+    background: var(--clr-cta-400);
+
+    &amp;:visited {
+      color: var(--clr-neutral-100);
+    }
+
+    &amp;:hover,
+    &amp;:focus {
+      background: var(--clr-neutral-900);
+    }
+  }
+
+  &amp;--inset {
+    --border-size: 2px;
+    --outline-size: var(--border-size);
+    outline-offset: calc(var(--outline-size) * -1);
+    transition: outline-offset var(--timing-fast) var(--easing);
+
+    &amp;:hover,
+    &amp;:focus {
+      background: none;
+      color: inherit;
+      outline-offset: calc(var(--outline-size) * -3);
+    }
+  }
+
+  &amp;--inset-inverted {
+    --border-size: 0px;
+    --outline-size: 2px;
+    background: var(--clr-secondary-400);
+    color: var(--clr-neutral-100);
+    outline-color: var(--clr-neutral-100);
+    outline-offset: 0;
+    transition: outline-offset var(--timing-fast) var(--easing);
+
+    &amp;:visited {
+      color: var(--clr-neutral-100);
+    }
+
+    &amp;:hover,
+    &amp;:focus {
+      background: var(--clr-secondary-400);
+      outline-offset: calc(var(--outline-size) * -3);
+    }
+  }
+
+  &amp;--slide {
+    position: relative;
+
+    @include pseudo {
+      @extend %absolute;
+      @extend %absolute--full;
+      background: var(--clr-secondary-400);
+      max-width: 0;
+      transition: max-width var(--timing-fast) var(--easing),
+        color var(--timing-fast) var(--easing);
+      z-index: -1;
+    }
+
+    &amp;:hover,
+    &amp;:focus {
+      background: none;
+
+      @include pseudo {
+        max-width: 100%;
+      }
+    }
+  }
+}</code>" data-collapsed=".btn { ... }"><code>.btn { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Class for creating different looking buttons</p></div><h3 class="item__sub-heading">Links</h3><ul class="list-unstyled"><li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/calc()">calc()</a></li></ul><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Reyno te Koppele</p></li></ul></section><section class="main__item container item" id="components-css-.grid"><h3 class="item__heading"><a class="item__name" href="#css-.grid">.grid</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>.grid {
+  display: grid;
+  grid-template-columns: var(--col-template, 1fr);
+  gap: var(--sp-medium);
+
+  @include mq(&#39;small&#39;) {
+    --col-template: repeat(3, 1fr);
+
+    &amp;--two-columns {
+      --col-template: repeat(2, 1fr);
+    }
+
+    &amp;--four-columns {
+      --col-template: repeat(2, 1fr);
+
+      @include mq(&#39;medium&#39;) {
+        --col-template: repeat(4, 1fr);
+      }
+    }
+
+    &amp;--content-side {
+      --col-template: 3fr 1fr;
+    }
+
+    &amp;--side-content {
+      --col-template: 1fr 3fr;
+    }
+
+    &amp;--side-content-side {
+      --col-template: 1fr 2fr 1fr;
+    }
+  }
+}</code>" data-collapsed=".grid { ... }"><code>.grid { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Class for creating differently spaced grids</p></div><h3 class="item__sub-heading">Links</h3><ul class="list-unstyled"><li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/repeat()">repeat()</a></li></ul><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Reyno te Koppele</p></li></ul></section></section></section><section class="main__section"><h1 class="main__heading" id="reset"><div class="container">reset</div></h1><section class="main__sub-section" id="reset-css"><h2 class="main__heading--secondary"><div class="container">css</div></h2><section class="main__item container item" id="reset-css-*,
 *::before,
 *::after"><h3 class="item__heading"><a class="item__name" href="#css-*,
 *::before,
@@ -265,7 +483,7 @@ capitalize(bar) =&gt; Bar</code></pre></div><h3 class="item__sub-heading">Links<
   }
  }" data-collapsed="@mixin mq($key) { ... }"><code>@mixin mq($key) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Add media query for given size</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter </span>Name</th><th scope="col"><span class="visually-hidden">parameter </span>Description</th><th scope="col"><span class="visually-hidden">parameter </span>Type</th><th scope="col"><span class="visually-hidden">parameter </span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$key</code></th><td data-label="desc"><p>Key present in $breakpoints</p></td><td data-label="type"><code>String</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr></tbody></table><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>@include mq(&quot;m&quot;) {
   ...
-}</code></pre></div><h3 class="item__sub-heading">Throws</h3><ul class="list-unstyled"><li><p>Map does not contain key:</p></li></ul><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[variable]</span> <a href="#undefined-variable-breakpoints"><code>breakpoints</code></a></li></ul><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[css]</span> <a href="#undefined-css-:root"><code>:root</code></a></li><li><span class="item__cross-type">[css]</span> <a href="#undefined-css-.grid"><code>.grid</code></a></li></ul><h3 class="item__sub-heading">Links</h3><ul class="list-unstyled"><li><a href="https://sass-lang.com/documentation/modules/map#has-key">map-has-key()</a></li><li><a href="https://sass-lang.com/documentation/modules/map#get">map-get()</a></li></ul><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Reyno te Koppele</p></li></ul></section><section class="main__item container item" id="undefined-mixin-pseudo"><h3 class="item__heading"><a class="item__name" href="#mixin-pseudo">pseudo</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin pseudo($type: before, $content: &quot;&quot;) { 
+}</code></pre></div><h3 class="item__sub-heading">Throws</h3><ul class="list-unstyled"><li><p>Map does not contain key:</p></li></ul><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[variable]</span> <a href="#undefined-variable-breakpoints"><code>breakpoints</code></a></li></ul><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[css]</span> <a href="#components-css-.grid"><code>.grid</code></a></li><li><span class="item__cross-type">[css]</span> <a href="#undefined-css-:root"><code>:root</code></a></li></ul><h3 class="item__sub-heading">Links</h3><ul class="list-unstyled"><li><a href="https://sass-lang.com/documentation/modules/map#has-key">map-has-key()</a></li><li><a href="https://sass-lang.com/documentation/modules/map#get">map-get()</a></li></ul><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Reyno te Koppele</p></li></ul></section><section class="main__item container item" id="undefined-mixin-pseudo"><h3 class="item__heading"><a class="item__name" href="#mixin-pseudo">pseudo</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin pseudo($type: before, $content: &quot;&quot;) { 
   &amp;::#{$type} {
     content: $content;
     @content
@@ -275,77 +493,7 @@ capitalize(bar) =&gt; Bar</code></pre></div><h3 class="item__sub-heading">Links<
 }
 @include pseudo($type: after) {
   ...
-}</code></pre></div><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[css]</span> <a href="#undefined-css-img"><code>img</code></a></li></ul><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Reyno te Koppele</p></li></ul></section></section><section class="main__sub-section" id="undefined-css"><h2 class="main__heading--secondary"><div class="container">css</div></h2><section class="main__item container item" id="undefined-css-html"><h3 class="item__heading"><a class="item__name" href="#css-html">html</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>html {
-  font-size: 14px;
-}</code>" data-collapsed="html { ... }"><code>html { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Apply font-size for rem scaling</p></div><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Reyno te Koppele</p></li></ul></section><section class="main__item container item" id="undefined-css-body"><h3 class="item__heading"><a class="item__name" href="#css-body">body</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>body {
-  font-size: var(--fs-300);
-  font-family: var(--font-stack-body);
-  color: var(--clr-neutral-800);
-}</code>" data-collapsed="body { ... }"><code>body { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Apply color and font settings for general text</p></div><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Reyno te Koppele</p></li></ul></section><section class="main__item container item" id="undefined-css-h1, h2, h3, h4"><h3 class="item__heading"><a class="item__name" href="#css-h1, h2, h3, h4">h1, h2, h3, h4</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>h1, h2, h3, h4 {
-  font-family: var(--font-stack-heading);
-  font-weight: 700;
-  line-height: 1.1;
-  color: var(--clr, var(--clr-neutral-900));
-}</code>" data-collapsed="h1, h2, h3, h4 { ... }"><code>h1, h2, h3, h4 { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Apply color and font settings for headings</p></div><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Reyno te Koppele</p></li></ul></section><section class="main__item container item" id="undefined-css-h1,
-.h1"><h3 class="item__heading"><a class="item__name" href="#css-h1,
-.h1">h1, .h1</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>h1,
-.h1 {
-  font-size: var(--fs-800);
-}</code>" data-collapsed="h1,
-.h1 { ... }"><code>h1,
-.h1 { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Apply font-size from abstracts/_font-scale</p></div><h3 class="item__sub-heading">See</h3><ul class="list-unstyled"><li><span class="item__cross-type">[variable]</span> <a href="#variable-font-scale"><code>font-scale</code></a></li></ul><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Reyno te Koppele</p></li></ul></section><section class="main__item container item" id="undefined-css-h2,
-.h2"><h3 class="item__heading"><a class="item__name" href="#css-h2,
-.h2">h2, .h2</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>h2,
-.h2 {
-  font-size: var(--fs-700);
-}</code>" data-collapsed="h2,
-.h2 { ... }"><code>h2,
-.h2 { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Apply font-size from abstracts/_font-scale</p></div><h3 class="item__sub-heading">See</h3><ul class="list-unstyled"><li><span class="item__cross-type">[variable]</span> <a href="#variable-font-scale"><code>font-scale</code></a></li></ul><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Reyno te Koppele</p></li></ul></section><section class="main__item container item" id="undefined-css-h3,
-.h3"><h3 class="item__heading"><a class="item__name" href="#css-h3,
-.h3">h3, .h3</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>h3,
-.h3 {
-  font-size: var(--fs-600);
-}</code>" data-collapsed="h3,
-.h3 { ... }"><code>h3,
-.h3 { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Apply font-size from abstracts/_font-scale</p></div><h3 class="item__sub-heading">See</h3><ul class="list-unstyled"><li><span class="item__cross-type">[variable]</span> <a href="#variable-font-scale"><code>font-scale</code></a></li></ul><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Reyno te Koppele</p></li></ul></section><section class="main__item container item" id="undefined-css-h4,
-.h4"><h3 class="item__heading"><a class="item__name" href="#css-h4,
-.h4">h4, .h4</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>h4,
-.h4 {
-  font-size: var(--fs-500);
-}</code>" data-collapsed="h4,
-.h4 { ... }"><code>h4,
-.h4 { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Apply font-size from abstracts/_font-scale</p></div><h3 class="item__sub-heading">See</h3><ul class="list-unstyled"><li><span class="item__cross-type">[variable]</span> <a href="#variable-font-scale"><code>font-scale</code></a></li></ul><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Reyno te Koppele</p></li></ul></section><section class="main__item container item" id="undefined-css-small,
-.text-small"><h3 class="item__heading"><a class="item__name" href="#css-small,
-.text-small">small, .text-small</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>small,
-.text-small {
-  font-size: var(--fs-200);
-}</code>" data-collapsed="small,
-.text-small { ... }"><code>small,
-.text-small { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Apply font-size from abstracts/_font-scale</p></div><h3 class="item__sub-heading">See</h3><ul class="list-unstyled"><li><span class="item__cross-type">[variable]</span> <a href="#variable-font-scale"><code>font-scale</code></a></li></ul><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Reyno te Koppele</p></li></ul></section><section class="main__item container item" id="undefined-css-a"><h3 class="item__heading"><a class="item__name" href="#css-a">a</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>a {
-  color: inherit;
-  text-decoration: none;
-
-  &amp;:visited {
-    color: inherit;
-    text-decoration: none;
-  }
-}</code>" data-collapsed="a { ... }"><code>a { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Ignore default browser styling on all links</p></div><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Reyno te Koppele</p></li></ul></section><section class="main__item container item" id="undefined-css-a[href]:not([class])"><h3 class="item__heading"><a class="item__name" href="#css-a[href]:not([class])">a[href]:not([class])</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>a[href]:not([class]) {
-  color: var(--clr-primary-400);
-}</code>" data-collapsed="a[href]:not([class]) { ... }"><code>a[href]:not([class]) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Add a style for default&quot;links</p></div><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Reyno te Koppele</p></li></ul></section><section class="main__item container item" id="undefined-css-img"><h3 class="item__heading"><a class="item__name" href="#css-img">img</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>img {
-  font-weight: var(--fs-300);
-  text-align: center;
-
-  @include pseudo($content: &quot;We&#39;re sorry, the image is broken :(&quot;) {
-    display: block;
-    margin-bottom: var(--sp-xsmall);
-  }
-
-  @include pseudo($type: after, $content: &quot;(url: &quot; attr(src) &quot;)&quot;) {
-    display: block;
-    font-size: var(--fs-200);
-    margin-top: var(--sp-xsmall);
-  }
-}</code>" data-collapsed="img { ... }"><code>img { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Add more aesthetically-pleasing broken images</p></div><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Reyno te Koppele</p></li></ul></section><section class="main__item container item" id="undefined-css-:root"><h3 class="item__heading"><a class="item__name" href="#css-:root">:root</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>:root {
+}</code></pre></div><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[css]</span> <a href="#base-css-img"><code>img</code></a></li></ul><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Reyno te Koppele</p></li></ul></section></section><section class="main__sub-section" id="undefined-css"><h2 class="main__heading--secondary"><div class="container">css</div></h2><section class="main__item container item" id="undefined-css-:root"><h3 class="item__heading"><a class="item__name" href="#css-:root">:root</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>:root {
   // Colors
   @each $color, $shade in $colors {
     @each $prop, $value in $shade {
@@ -410,96 +558,7 @@ capitalize(bar) =&gt; Bar</code></pre></div><h3 class="item__sub-heading">Links<
 
   --clr-neutral-900-rgb: #{colorToRGB(map-get($neutral-colors, 900))};
   --shadow: 0px 2px 16px 0px rgba(var(--clr-neutral-900-rgb), 0.1);
-}</code>" data-collapsed=":root { ... }"><code>:root { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Add CSS variables to the DOM.</p></div><h3 class="item__sub-heading">Links</h3><ul class="list-unstyled"><li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties">var()</a></li><li><a href="https://sass-lang.com/documentation/modules/map#get">map-get()</a></li></ul><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Reyno te Koppele</p></li></ul></section><section class="main__item container item" id="undefined-css-.btn"><h3 class="item__heading"><a class="item__name" href="#css-.btn">.btn</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>.btn {
-  display: inline-flex;
-  @extend %flex--center;
-  background: none;
-  border: var(--border-size, 1px) var(--border-style) var(--clr-neutral-900);
-  color: var(--clr-neutral-900);
-  cursor: pointer;
-  outline: 0;
-  padding: calc(var(--sp-xsmall-em) - var(--border-size, 1px))
-    calc(var(--sp-medium-em) - var(--border-size, 1px));
-  transition: background-color var(--timing-fast) var(--easing),
-    color var(--timing-fast) var(--easing);
-
-  &amp;:hover,
-  &amp;:focus {
-    background: var(--clr-neutral-900);
-    color: var(--clr-neutral-100);
-  }
-
-  &amp;--cta {
-    --border-size: 0px;
-    border: none;
-    color: var(--clr-neutral-100);
-    background: var(--clr-cta-400);
-
-    &amp;:hover,
-    &amp;:focus {
-      background: var(--clr-neutral-900);
-    }
-  }
-}</code>" data-collapsed=".btn { ... }"><code>.btn { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Class for creating a button or call-to-action button</p></div><h3 class="item__sub-heading">Links</h3><ul class="list-unstyled"><li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/calc()">calc()</a></li></ul><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Reyno te Koppele</p></li></ul></section><section class="main__item container item" id="undefined-css-.grid"><h3 class="item__heading"><a class="item__name" href="#css-.grid">.grid</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>.grid {
-  display: grid;
-  grid-template-columns: var(--col-template, 1fr);
-  gap: var(--sp-medium);
-
-  @include mq(&quot;small&quot;) {
-    --col-template: repeat(3, 1fr);
-  }
-
-  &amp;--two-columns {
-    @include mq(&quot;small&quot;) {
-      --col-template: repeat(2, 1fr);
-    }
-  }
-
-  &amp;--four-columns {
-    @include mq(&quot;small&quot;) {
-      --col-template: repeat(2, 1fr);
-    }
-
-    @include mq(&quot;medium&quot;) {
-      --col-template: repeat(4, 1fr);
-    }
-  }
-
-  &amp;--content-side {
-    @include mq(&quot;small&quot;) {
-      --col-template: 3fr 1fr;
-    }
-  }
-
-  &amp;--side-content {
-    @include mq(&quot;small&quot;) {
-      --col-template: 1fr 3fr;
-    }
-  }
-
-  &amp;--side-content-side {
-    @include mq(&quot;small&quot;) {
-      --col-template: 1fr 2fr 1fr;
-    }
-  }
-}</code>" data-collapsed=".grid { ... }"><code>.grid { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Class for creating differently spaced grids</p></div><h3 class="item__sub-heading">Links</h3><ul class="list-unstyled"><li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/repeat()">repeat()</a></li></ul><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Reyno te Koppele</p></li></ul></section><section class="main__item container item" id="undefined-css-.sr-only"><h3 class="item__heading"><a class="item__name" href="#css-.sr-only">.sr-only</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>.sr-only {
-  border: 0 !important;
-  clip: rect(1px, 1px, 1px, 1px) !important;
-  -webkit-clip-path: inset(50%) !important;
-  clip-path: inset(50%) !important;
-  height: 1px !important;
-  margin: -1px !important;
-  overflow: hidden !important;
-  padding: 0 !important;
-  position: absolute !important;
-  width: 1px !important;
-  white-space: nowrap !important;
-}</code>" data-collapsed=".sr-only { ... }"><code>.sr-only { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Class for screen reader elements</p></div><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Reyno te Koppele</p></li></ul></section><section class="main__item container item" id="undefined-css-.wrap"><h3 class="item__heading"><a class="item__name" href="#css-.wrap">.wrap</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>.wrap {
-  max-width: var(--breakpoint-medium);
-  margin: 0 auto;
-}</code>" data-collapsed=".wrap { ... }"><code>.wrap { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Class for creating a wrapper element</p></div><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Reyno te Koppele</p></li></ul></section><section class="main__item container item" id="undefined-css-.wysiwyg &gt; * + *"><h3 class="item__heading"><a class="item__name" href="#css-.wysiwyg &gt; * + *">.wysiwyg &gt; * + *</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>.wysiwyg &gt; * + * {
-  margin-top: var(--sp-xsmall-em, .75em);
-}</code>" data-collapsed=".wysiwyg &gt; * + * { ... }"><code>.wysiwyg &gt; * + * { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Class for spacing elements based on their font size</p></div><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Reyno te Koppele</p></li></ul></section></section><section class="main__sub-section" id="undefined-placeholder"><h2 class="main__heading--secondary"><div class="container">placeholders</div></h2><section class="main__item container item" id="undefined-placeholder-flex"><h3 class="item__heading"><a class="item__name" href="#placeholder-flex">flex</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="%flex { 
+}</code>" data-collapsed=":root { ... }"><code>:root { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Add CSS variables to the DOM.</p></div><h3 class="item__sub-heading">Links</h3><ul class="list-unstyled"><li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties">var()</a></li><li><a href="https://sass-lang.com/documentation/modules/map#get">map-get()</a></li></ul><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Reyno te Koppele</p></li></ul></section></section><section class="main__sub-section" id="undefined-placeholder"><h2 class="main__heading--secondary"><div class="container">placeholders</div></h2><section class="main__item container item" id="undefined-placeholder-flex"><h3 class="item__heading"><a class="item__name" href="#placeholder-flex">flex</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="%flex { 
   display: flex;
 
   &amp;--center {
@@ -515,7 +574,7 @@ capitalize(bar) =&gt; Bar</code></pre></div><h3 class="item__sub-heading">Links<
   @extend %flex;
   @extend %flex--center;
   ...
-}</code></pre></div><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[css]</span> <a href="#undefined-css-.btn"><code>.btn</code></a></li></ul><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Reyno te Koppele</p></li></ul></section><section class="main__item container item" id="undefined-placeholder-absolute"><h3 class="item__heading"><a class="item__name" href="#placeholder-absolute">absolute</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="%absolute { 
+}</code></pre></div><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[css]</span> <a href="#components-css-.btn"><code>.btn</code></a></li></ul><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Reyno te Koppele</p></li></ul></section><section class="main__item container item" id="undefined-placeholder-absolute"><h3 class="item__heading"><a class="item__name" href="#placeholder-absolute">absolute</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="%absolute { 
   position: absolute;
 
   &amp;--full {
@@ -533,4 +592,21 @@ capitalize(bar) =&gt; Bar</code></pre></div><h3 class="item__sub-heading">Links<
   @extend %absolute;
   @extend %absolute--full;
   ...
-}</code></pre></div><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Reyno te Koppele</p></li></ul></section></section></section><footer class="footer" role="contentinfo"><div class="container"><div class="footer__project-info project-info"><!-- Name and URL --> <span class="project-info__name">Sass-blueprint</span><!-- Version --> <span class="project-info__version">- v1.0.0</span><!-- License --> <span class="project-info__license">, under MIT</span></div><a class="footer__watermark" href="http://sassdoc.com"><img src="assets/images/logo_light_inline.svg" alt="SassDoc Logo"></a></div></footer></article><script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script><script>window.jQuery || document.write('<script src="assets/js/vendor/jquery.min.js"><\/script>')</script><script src="assets/js/main.min.js"></script></body></html>
+}</code></pre></div><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[css]</span> <a href="#components-css-.btn"><code>.btn</code></a></li></ul><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Reyno te Koppele</p></li></ul></section></section></section><section class="main__section"><h1 class="main__heading" id="utilities"><div class="container">utilities</div></h1><section class="main__sub-section" id="utilities-css"><h2 class="main__heading--secondary"><div class="container">css</div></h2><section class="main__item container item" id="utilities-css-.sr-only"><h3 class="item__heading"><a class="item__name" href="#css-.sr-only">.sr-only</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>.sr-only {
+  border: 0 !important;
+  clip: rect(1px, 1px, 1px, 1px) !important;
+  -webkit-clip-path: inset(50%) !important;
+  clip-path: inset(50%) !important;
+  height: 1px !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  width: 1px !important;
+  white-space: nowrap !important;
+}</code>" data-collapsed=".sr-only { ... }"><code>.sr-only { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Class for screen reader elements</p></div><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Reyno te Koppele</p></li></ul></section><section class="main__item container item" id="utilities-css-.wrap"><h3 class="item__heading"><a class="item__name" href="#css-.wrap">.wrap</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>.wrap {
+  max-width: var(--breakpoint-medium);
+  margin: 0 auto;
+}</code>" data-collapsed=".wrap { ... }"><code>.wrap { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Class for creating a wrapper element</p></div><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Reyno te Koppele</p></li></ul></section><section class="main__item container item" id="utilities-css-.wysiwyg &gt; * + *"><h3 class="item__heading"><a class="item__name" href="#css-.wysiwyg &gt; * + *">.wysiwyg &gt; * + *</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>.wysiwyg &gt; * + * {
+  margin-top: var(--sp-xsmall-em, 0.75em);
+}</code>" data-collapsed=".wysiwyg &gt; * + * { ... }"><code>.wysiwyg &gt; * + * { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Class for spacing elements based on their font size</p></div><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Reyno te Koppele</p></li></ul></section></section></section><footer class="footer" role="contentinfo"><div class="container"><div class="footer__project-info project-info"><!-- Name and URL --> <span class="project-info__name">Sass-blueprint</span><!-- Version --> <span class="project-info__version">- v1.0.0</span><!-- License --> <span class="project-info__license">, under MIT</span></div><a class="footer__watermark" href="http://sassdoc.com"><img src="assets/images/logo_light_inline.svg" alt="SassDoc Logo"></a></div></footer></article><script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script><script>window.jQuery || document.write('<script src="assets/js/vendor/jquery.min.js"><\/script>')</script><script src="assets/js/main.min.js"></script></body></html>
