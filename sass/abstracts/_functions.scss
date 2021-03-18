@@ -1,3 +1,7 @@
+@use "sass:color";
+@use "sass:list";
+@use "sass:string";
+
 /// Converts a color into an RGB value
 ///
 /// @example
@@ -14,7 +18,7 @@
 /// @link https://sass-lang.com/documentation/modules/color#blue blue()
 ///
 @function colorToRGB($color) {
-  @return red($color), green($color), blue($color);
+  @return color.red($color), color.green($color), color.blue($color);
 }
 
 /// Convert px to rem unit
@@ -53,8 +57,8 @@
 /// @link https://sass-lang.com/documentation/modules/list#length length()
 ///
 @function getDirectParent($element) {
-  $selector: nth($element, 1);
-  $direct-parent: nth($selector, length($selector));
+  $selector: list.nth($element, 1);
+  $direct-parent: list.nth($selector, list.length($selector));
 
   @return $direct-parent;
 }
@@ -73,5 +77,5 @@
 /// @link https://sass-lang.com/documentation/modules/string#slice str-slice()
 ///
 @function capitalize($string) {
-  @return to-upper-case(str-slice($string, 1, 1)) + str-slice($string, 2);
+  @return string.to-upper-case(str-slice($string, 1, 1)) + str-slice($string, 2);
 }
