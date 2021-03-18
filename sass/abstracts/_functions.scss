@@ -1,6 +1,7 @@
 @use "sass:color";
 @use "sass:list";
 @use "sass:string";
+@use "sass:math";
 
 /// Converts a color into an RGB value
 ///
@@ -34,8 +35,10 @@
 /// @param {Number} $rem [14px] - Base rem size in pixels
 /// @return {Number} Rem value for given $size
 ///
+/// @require {function} numToFixed
+///
 @function pxToRem($size, $rem: 14px) {
-  @return ($size / $rem) + "rem";
+  @return numToFixed($size / $rem) * 1rem;
 }
 
 /// Get direct parent from selector
@@ -72,10 +75,117 @@
 /// @author Reyno te Koppele
 ///
 /// @param {String} $string - String to capitalize
+/// @return {String} Capitalized version of the input
 ///
 /// @link https://sass-lang.com/documentation/modules/string#to-upper-case to-upper-case()
 /// @link https://sass-lang.com/documentation/modules/string#slice str-slice()
 ///
 @function capitalize($string) {
   @return string.to-upper-case(str-slice($string, 1, 1)) + str-slice($string, 2);
+}
+
+/// Formats a number using fixed-point notation
+///
+/// @example
+///   numToFixed(5.12345) => 5.123
+///   numToFixed(5.12345, $digits: 1) => 5.1
+///
+/// @author Reyno te Koppele
+///
+/// @param {Number} $num - Number to format
+/// @param {Number} $digits [3] - Max number of digits
+/// @return {Number} Formatted number
+///
+/// @link https://sass-lang.com/documentation/modules/math#round round()
+///
+@function numToFixed($num, $digits: 3) {
+  $base: 1;
+
+  @if $digits > 0 {
+    @for $i from 1 through $digits {
+      $base: $base * 10;
+    }
+  }
+
+  @return math.round($num * $base) / $base;
+}
+
+/// Creates tint of given color
+///
+/// @example
+///   tintColor(#ff0000, 20%) => #ff3333
+///   tintColor(#0000ff, 80%) => #ccffcc
+///
+/// @author Reyno te Koppele
+///
+/// @param {Color} $color - Color to tint
+/// @param {Number} $weight - How much white to apply (percentage)
+/// @return {Color} Tinted color
+///
+/// @link https://sass-lang.com/documentation/modules/color#mix mix()
+///
+@function tintColor($color, $weight) {
+  @return color.mix(white, $color, $weight);
+}
+
+/// Creates shade of given color
+///
+/// @example
+///   shadeColor(#ff0000, 20%) => #cc0000
+///   shadeColor(#0000ff, 80%) => #000033
+///
+/// @author Reyno te Koppele
+///
+/// @param {Color} $color - Color to shade
+/// @param {Number} $weight - How much black to apply (percentage)
+/// @return {Color} Shaded color
+///
+/// @link https://sass-lang.com/documentation/modules/color#mix mix()
+///
+@function shadeColor($color, $weight) {
+  @return color.mix(black, $color, $weight);
+}
+
+/// Create a scaling font size
+///
+/// @example
+///   fontScale(1rem, 2rem) => clamp(1rem, calc(0.538rem + 1.795vw), 2rem)
+///   fontScale(1rem, 2rem, $px-per-rem: 16px) => clamp(1rem, calc(0.538rem + 2.051vw), 2rem)
+///   fontScale(2rem, 3.5rem) => clamp(2rem, calc(1.308rem + 2.692vw), 3.5rem)
+///
+/// @author Reyno te Koppele
+///
+/// @param {Number} $minFS - Minimum size of the text
+/// @param {Number} $maxFS - Maximum size of the text
+/// @param {Number} $minVW [360px] - Viewport width when font-size should be smallest
+/// @param {Number} $maxVW [1140px] - Viewport witdh when font-size should be biggest
+/// @param {Number} $px-per-rem [14px] - How many px their are in 1rem
+/// @return {String} Clamp function that scales the font-size
+///
+/// @require {function} numToFixed
+///
+/// @link https://css-tricks.com/linearly-scale-font-size-with-css-clamp-based-on-the-viewport/ Explanation
+/// @link https://developer.mozilla.org/en-US/docs/Web/CSS/clamp() clamp()
+/// @link https://developer.mozilla.org/en-US/docs/Web/CSS/calc() calc()
+///
+@function fontScale(
+  $minFS,
+  $maxFS,
+  $minVW: 360px,
+  $maxVW: 1140px,
+  $px-per-rem: 14px
+) {
+  $minVW: $minVW / $px-per-rem;
+  $maxVW: $maxVW / $px-per-rem;
+  $slope: (($maxFS - $minFS) / ($maxVW - $minVW)) / 1rem;
+  $yAxisIntersection: -$minVW * $slope + $minFS;
+
+  $slopeRound: numToFixed($slope * 100) * 1vw;
+  $yIntersectionRound: numToFixed($yAxisIntersection);
+
+  @return clamp(
+    #{$minFS},
+    calc(#{$yIntersectionRound} + #{$slopeRound}),
+    #{$maxFS}
+  );
 }
