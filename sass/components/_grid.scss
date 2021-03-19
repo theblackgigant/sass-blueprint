@@ -12,7 +12,7 @@
 .grid {
   display: grid;
   grid-template-columns: var(--col-template, 1fr);
-  gap: var(--sp-medium);
+  gap: 2rem;
 
   @include mq('small') {
     --col-template: repeat(3, 1fr);

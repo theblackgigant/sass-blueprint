@@ -41,19 +41,6 @@
     --fs-#{$size}: #{$scale};
   }
 
-  // Spacing
-  @each $type, $space in $spacing {
-    @if $type == rem {
-      @each $prop, $value in $space {
-        --sp-#{$prop}: #{$value};
-      }
-    } @else {
-      @each $prop, $value in $space {
-        --sp-#{$prop}-#{$type}: #{$value};
-      }
-    }
-  }
-
   // Breakpoints
   @each $name, $size in $breakpoints {
     --breakpoint-#{$name}: #{$size};

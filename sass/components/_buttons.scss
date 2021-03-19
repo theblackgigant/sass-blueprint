@@ -19,8 +19,8 @@
   outline: var(--outline-size, 0px) var(--border-style) var(--clr-neutral-900);
   color: var(--clr-neutral-900);
   cursor: pointer;
-  padding: calc(var(--sp-xsmall-em) - var(--border-size, 1px))
-    calc(var(--sp-medium-em) - var(--border-size, 1px));
+  padding: calc(0.75em - var(--border-size, 1px))
+    calc(2rem - var(--border-size, 1px));
   transition: background-color var(--timing-fast) var(--easing),
     color var(--timing-fast) var(--easing);
 

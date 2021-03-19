@@ -19,7 +19,7 @@
 ///
 .columns {
   $columns: 12;
-  --gap: var(--sp-medium, 2rem);
+  --gap: 2rem;
   display: grid;
   gap: var(--gap);
 
