@@ -31,17 +31,17 @@
   &:hover,
   &:focus {
     background: var(--clr-neutral-900);
-    color: var(--clr-neutral-100);
+    color: var(--clr-neutral-0);
   }
 
   &--cta {
     --border-size: 0px;
     border: none;
-    color: var(--clr-neutral-100);
-    background: var(--clr-cta-400);
+    color: var(--clr-neutral-0);
+    background: var(--clr-cta-500);
 
     &:visited {
-      color: var(--clr-neutral-100);
+      color: var(--clr-neutral-0);
     }
 
     &:hover,
@@ -67,19 +67,19 @@
   &--inset-inverted {
     --border-size: 0px;
     --outline-size: 2px;
-    background: var(--clr-secondary-400);
-    color: var(--clr-neutral-100);
-    outline-color: var(--clr-neutral-100);
+    background: var(--clr-secondary-500);
+    color: var(--clr-neutral-0);
+    outline-color: var(--clr-neutral-0);
     outline-offset: 0;
     transition: outline-offset var(--timing-fast) var(--easing);
 
     &:visited {
-      color: var(--clr-neutral-100);
+      color: var(--clr-neutral-0);
     }
 
     &:hover,
     &:focus {
-      background: var(--clr-secondary-400);
+      background: var(--clr-secondary-500);
       outline-offset: calc(var(--outline-size) * -3);
     }
   }
@@ -90,7 +90,7 @@
     @include pseudo {
       @extend %absolute;
       @extend %absolute--full;
-      background: var(--clr-secondary-400);
+      background: var(--clr-secondary-500);
       max-width: 0;
       transition: max-width var(--timing-fast) var(--easing),
         color var(--timing-fast) var(--easing);

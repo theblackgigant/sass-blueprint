@@ -1,105 +1,16 @@
-/// Primary colors
+/// Colors to use within our SASS. Tints and shades will automatically be generated
 ///
 /// @author Reyno te Koppele
 ///
 /// @type Map
-/// @prop {Color} 100 [hsl(186, 37%, 80%)]
-/// @prop {Color} 200 [hsl(186, 37%, 70%)]
-/// @prop {Color} 300 [hsl(186, 37%, 60%)]
-/// @prop {Color} 400 [hsl(186, 37%, 38%)]
-/// @prop {Color} 500 [hsl(186, 37%, 20%)]
-///
-$primary-colors: (
-  100: hsl(186, 37%, 80%),
-  200: hsl(186, 37%, 70%),
-  300: hsl(186, 37%, 60%),
-  400: hsl(186, 37%, 38%),
-  500: hsl(186, 37%, 20%),
-) !default;
-
-/// Secondary colors
-///
-/// @author Reyno te Koppele
-///
-/// @type Map
-/// @prop {Color} 100 [hsl(200, 100%, 80%)]
-/// @prop {Color} 200 [hsl(200, 100%, 70%)]
-/// @prop {Color} 300 [hsl(200, 100%, 45%)]
-/// @prop {Color} 400 [hsl(200, 100%, 36%)]
-/// @prop {Color} 500 [hsl(200, 100%, 20%)]
-///
-$secondary-colors: (
-  100: hsl(200, 100%, 80%),
-  200: hsl(200, 100%, 70%),
-  300: hsl(200, 100%, 45%),
-  400: hsl(200, 100%, 36%),
-  500: hsl(200, 100%, 20%),
-) !default;
-
-/// Call To Action colors
-///
-/// @author Reyno te Koppele
-///
-/// @type Map
-/// @prop {Color} 100 [hsl(0, 66%, 90%)]
-/// @prop {Color} 200 [hsl(0, 66%, 80%)]
-/// @prop {Color} 300 [hsl(0, 66%, 70%)]
-/// @prop {Color} 400 [hsl(0, 66%, 60%)]
-/// @prop {Color} 500 [hsl(0, 66%, 40%)]
-///
-$cta-colors: (
-  100: hsl(0, 66%, 90%),
-  200: hsl(0, 66%, 80%),
-  300: hsl(0, 66%, 70%),
-  400: hsl(0, 66%, 60%),
-  500: hsl(0, 66%, 40%),
-) !default;
-
-/// Neutral colors
-///
-/// @author Reyno te Koppele
-///
-/// @type Map
-/// @prop {Color} 100 [hsl(0, 0%, 100%)]
-/// @prop {Color} 200 [hsl(210, 11%, 93%)]
-/// @prop {Color} 300 [hsl(210, 11%, 89%)]
-/// @prop {Color} 400 [hsl(210, 11%, 83%)]
-/// @prop {Color} 500 [hsl(210, 11%, 71%)]
-/// @prop {Color} 600 [hsl(210, 11%, 46%)]
-/// @prop {Color} 700 [hsl(210, 11%, 31%)]
-/// @prop {Color} 800 [hsl(210, 11%, 32%)]
-/// @prop {Color} 900 [hsl(210, 11%, 15%)]
-///
-$neutral-colors: (
-  100: hsl(0, 0%, 100%),
-  200: hsl(210, 11%, 93%),
-  300: hsl(210, 11%, 89%),
-  400: hsl(210, 11%, 83%),
-  500: hsl(210, 11%, 71%),
-  600: hsl(210, 11%, 46%),
-  700: hsl(210, 11%, 31%),
-  800: hsl(210, 11%, 23%),
-  900: hsl(210, 11%, 15%)
-) !default;
-
-/// Colors to use within our SASS
-///
-/// @author Reyno te Koppele
-///
-/// @type Map
-/// @prop {Map} primary - Colors for primary use
-/// @prop {Map} secondary - Colors for secondary use
-/// @prop {Map} cta - Colors to emphasize elements
-/// @prop {Map} neutral - Colors for neutral use
-///
-/// @require {variable} $primary-colors
-/// @require {variable} $secondary-colors
-/// @require {variable} $cta-colors
-/// @require {variable} $neutral-colors
+/// @prop {Color} primary [hsl(186, 37%, 38%)] - Color for primary use
+/// @prop {Color} secondary [hsl(200, 100%, 36%)] - Color for secondary use
+/// @prop {Color} cta [hsl(0, 66%, 60%)] - Color to emphasize elements
+/// @prop {Color} neutral [hsl(210, 11%, 71%)] - Color for neutral use
 ///
 $colors: (
-  primary: $primary-colors,
-  secondary: $secondary-colors,
-  cta: $cta-colors,
-  neutral: $neutral-colors,
+  primary: hsl(186, 37%, 38%),
+  secondary: hsl(200, 100%, 36%),
+  cta: hsl(0, 66%, 60%),
+  neutral: hsl(210, 11%, 71%),
 ) !default;

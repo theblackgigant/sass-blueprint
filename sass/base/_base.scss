@@ -116,7 +116,7 @@ a {
 /// @group Base
 ///
 a[href]:not([class]) {
-  color: var(--clr-primary-400);
+  color: var(--clr-primary-500);
 }
 
 /// Add more aesthetically-pleasing broken images
@@ -127,7 +127,7 @@ a[href]:not([class]) {
 /// @require {mixin} pseudo
 ///
 img {
-  font-weight: var(--fs-300);
+  font-size: var(--fs-300);
   text-align: center;
 
   @include pseudo($content: "We're sorry, the image is broken :(") {
@@ -156,7 +156,7 @@ textarea {
   padding: var(--sp-xsmall) var(--sp-small);
   color: var(--clr-neutral-800);
   outline: 0;
-  background: var(--clr-neutral-100);
+  background: var(--clr-neutral-0);
   background-clip: padding-box;
   border: var(--border);
   transition: border-color var(--timing-fast) var(--easing);

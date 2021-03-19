@@ -7,37 +7,38 @@
 /// @author Reyno te Koppele
 ///
 /// @require {function} colorToRGB
-/// @require {mixin} mq
 /// @require {variable} $colors
 /// @require {variable} $font-scale
 /// @require {variable} $spacing
 /// @require {variable} $breakpoints
 ///
 /// @link https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties var()
-/// @link https://sass-lang.com/documentation/modules/map#get map-get()
 ///
 :root {
   // Colors
-  @each $color, $shade in $colors {
-    @each $prop, $value in $shade {
-      --clr-#{$color}-#{$prop}: #{$value};
+  @each $name, $color in $colors {
+    @if $name == neutral {
+      --clr-neutral-0: #ffffff;
+    }
+
+    --clr-#{$name}-100: #{tintColor($color, 80%)};
+    --clr-#{$name}-200: #{tintColor($color, 60%)};
+    --clr-#{$name}-300: #{tintColor($color, 40%)};
+    --clr-#{$name}-400: #{tintColor($color, 20%)};
+    --clr-#{$name}-500: #{$color};
+    --clr-#{$name}-600: #{shadeColor($color, 20%)};
+    --clr-#{$name}-700: #{shadeColor($color, 40%)};
+    --clr-#{$name}-800: #{shadeColor($color, 60%)};
+    --clr-#{$name}-900: #{shadeColor($color, 80%)};
+
+    @if $name == neutral {
+      --clr-neutral-1000: #000000;
     }
   }
 
   // Font sizes
-  @each $screen-size, $property in $font-scale {
-    @if $screen-size == small {
-      @each $prop, $value in $property {
-        --fs-#{$prop}: #{$value};
-      }
-    } @else {
-      @include mq(small) {
-        @each $prop,
-        $value in $property {
-          --fs-#{$prop}: #{$value};
-        }
-      }
-    }
+  @each $size, $scale in $font-scale {
+    --fs-#{$size}: #{$scale};
   }
 
   // Spacing
@@ -60,8 +61,8 @@
 
   --font-body: Roboto;
   --font-heading: Poppins;
-  --font-fallback: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  --font-fallback: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
   --font-stack-body: var(--font-body), var(--font-fallback);
   --font-stack-heading: var(--font-heading), var(--font-fallback);
 
@@ -79,6 +80,5 @@
   --border: var(--border-width) var(--border-style) var(--border-color);
   --border-radius: 15px;
 
-  --clr-neutral-900-rgb: #{colorToRGB(map-get($neutral-colors, 900))};
-  --shadow: 0px 2px 16px 0px rgba(var(--clr-neutral-900-rgb), 0.1);
+  --shadow: 0px 2px 16px 0px rgba(0, 0, 0, 0, 0.1);
 }

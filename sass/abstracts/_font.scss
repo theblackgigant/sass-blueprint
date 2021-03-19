@@ -1,33 +1,30 @@
+@use "./functions" as *;
+
 /// Font scaling for our fonts
 ///
 /// @author Reyno te Koppele
 ///
 /// @type Map
-/// @prop {Number} xs [320px] - Breakpoint for extra small screens
-/// @prop {Number} s [375px] - Breakpoint for small screens
-/// @prop {Number} m [768px] - Breakpoint for medium screens
-/// @prop {Number} l [1024px] - Breakpoint for large screens
-/// @prop {Number} xl [1920px] - Breakpoint for extra large screens
+/// @prop {Function} 200 [fontScale(0.714rem, 0.857rem)]
+/// @prop {Function} 300 [fontScale(1rem, 1.143rem)]
+/// @prop {Function} 400 [fontScale(1.143rem, 1.286rem)]
+/// @prop {Function} 500 [fontScale(1.286rem, 1.5rem)]
+/// @prop {Function} 600 [fontScale(1.5rem, 1.714rem)]
+/// @prop {Function} 700 [fontScale(1.714rem, 2rem)]
+/// @prop {Function} 800 [fontScale(2.286rem, 2.857rem)]
+/// @prop {Function} 900 [fontScale(2.857rem, 3.714rem)]
+///
+/// @require {function} fontScale
 ///
 $font-scale: (
-  small:(
-    200: 0.8rem,
-    300: 1rem,
-    400: 1.125rem,
-    500: 1.563rem,
-    600: 1.953rem,
-    700: 2.441rem,
-    800: 3.052rem
-  ),
-  big:(
-    200: 0.8rem,
-    300: 1rem,
-    400: 1.25rem,
-    500: 2rem,
-    600: 2.827rem,
-    700: 4rem,
-    800: 5.653rem
-  )
+  200: fontScale(0.786rem, 0.857rem),
+  300: fontScale(1rem, 1.143rem),
+  400: fontScale(1.143rem, 1.286rem),
+  500: fontScale(1.286rem, 1.5rem),
+  600: fontScale(1.5rem, 1.714rem),
+  700: fontScale(1.714rem, 2rem),
+  800: fontScale(2.286rem, 2.857rem),
+  900: fontScale(2.857rem, 3.714rem),
 ) !default;
 
 /// Unicodes we use for our font files
