@@ -1,0 +1,36 @@
+@use "../abstracts/mixins" as *;
+
+/// Class for creating a column based elements
+///
+/// @example
+///   <div class='columns'>
+///     <div class='columns__col columns__col--4'>4</div>
+///     <div class='columns__col columns__col--4'>4</div>
+///     <div class='columns__col columns__col--4'>4</div>
+///   </div>
+///
+///   <div class='columns'>
+///     <div class='columns__col columns__col--6'>6</div>
+///     <div class='columns__col columns__col--6'>6</div>
+///   </div>
+///
+/// @author Reyno te Koppele
+/// @group Utilities
+///
+.columns {
+  $columns: 12;
+  --gap: var(--sp-medium, 2rem);
+  display: grid;
+  gap: var(--gap);
+
+  &__col {
+    background: #efefef;
+    @for $i from 1 through $columns {
+      @include mq('small') {
+        &--#{$i} {
+          grid-column-start: span $i;
+        }
+      }
+    }
+  }
+}
