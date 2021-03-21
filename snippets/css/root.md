@@ -1,9 +1,11 @@
-@use "../abstracts" as *;
-@use "../abstracts/mixins" as *;
-@use "../abstracts/functions" as *;
+# root (:root)
 
+The root element stores all (global) `CSS` variables. Some variables are generated from `SCSS` maps so we don't have to repeat them multiple times.
+
+## Code
+
+```scss
 :root {
-  // Colors
   @each $name, $color in $colors {
     @if $name == neutral {
       --clr-neutral-0: #ffffff;
@@ -57,3 +59,14 @@
 
   --shadow: 0px 2px 16px 0px rgba(0, 0, 0, 0, 0.1);
 }
+```
+
+## Requirements
+
+- **[Variable]** [colors](variables/colors.md)
+- **[Variable]** [font-scale](variables/font-scales.md)
+- **[Variable]** [breakpoints](variables/breakpoints.md)
+
+## Usefull links
+
+- [var()](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties)

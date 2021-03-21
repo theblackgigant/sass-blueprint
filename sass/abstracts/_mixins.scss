@@ -46,9 +46,9 @@
 /// @param {String} $content [""] - Content to use
 /// @content [Content for pseudo selector]
 ///
-@mixin pseudo($type: before, $content: "") {
+@mixin pseudo($type: before, $content: '') {
   &::#{$type} {
     content: $content;
-    @content
+    @content;
   }
 }

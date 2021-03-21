@@ -1,0 +1,52 @@
+:root {
+  --timing: 0.5s;
+  --timing-slow: 1s;
+  --timing-fast: 0.25s;
+
+  --easing: ease-in-out;
+  --easing-in: ease-in;
+  --easing-out: ease-out;
+}
+
+table.transition-table {
+  display: table;
+  table-layout: fixed;
+  color: #333;
+  text-align: left;
+}
+
+.transition-table__cell {
+  --size: 20px;
+  --offset: 13px;
+  position: relative;
+}
+
+.transition-table__cell:hover .transition-table__block {
+  left: calc(100% - var(--offset) - var(--size));
+}
+
+.transition-table__block {
+  position: absolute;
+  width: var(--size);
+  height: var(--size);
+  background: var(--clr-cta-500);
+  left: var(--offset);
+  top: calc((32px - var(--size)) / 2);
+  transition: left var(--timing) var(--easing);
+}
+
+.transition-table__block--in {
+  transition-timing-function: var(--easing-in);
+}
+
+.transition-table__block--out {
+  transition-timing-function: var(--easing-out);
+}
+
+.transition-table__block--slow {
+  transition-duration: var(--timing-slow);
+}
+
+.transition-table__block--fast {
+  transition-duration: var(--timing-fast);
+}

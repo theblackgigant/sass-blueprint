@@ -1,0 +1,23 @@
+:root {
+  --breakpoint-small: 40em;
+  --breakpoint-medium: 65em;
+}
+
+.breakpoint-overview {
+  --red: #f69c9e;
+  --green: #97e3c2;
+  --blue: #99c3ec;
+  padding: 2rem;
+  background: var(--blue);
+}
+
+@media only screen and (min-width: 40em) {
+  .breakpoint-overview {
+    background: var(--green);
+  }
+}
+@media only screen and (min-width: 65em) {
+  .breakpoint-overview {
+    background: var(--red);
+  }
+}

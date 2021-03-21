@@ -1,55 +1,7 @@
+@use "sass:string";
 @use "../abstracts/font" as *;
 @use "../abstracts/functions" as *;
 
-// See https://css-tricks.com/three-techniques-performant-custom-font-usage/
-
-/*
-# Unicodes
------------------------------------------------------------------------
- ID  |  Unicode range(s)         |  Unicode range name(s)
------------------------------------------------------------------------
- 1   |  U+0020-007F,U+00A0-00FF  |  Basic Latin, Latin-1 Supplement
- 2   |  U+0100-017F,U+20A0-20CF  |  Latin Extended-A, Currency Symbols
------------------------------------------------------------------------
-
-> https://jrgraphix.net/r/Unicode/
-
-# Files
------------------------------------------------------
- Files                 |  Unicode ID  |  File types
------------------------------------------------------
- Roboto-Light          |  1           |  woff, woff2
- Roboto-Light-Extra    |  2           |  woff, woff2
- Roboto-Regular        |  1           |  woff, woff2
- Roboto-Regular-Extra  |  2           |  woff, woff2
- Roboto-Bold           |  1           |  woff, woff2
- Roboto-Bold-Extra     |  2           |  woff, woff2
------------------------------------------------------
-
-# Command:
-pyftsubset [input] --unicodes="[unicode-range(s)]" --flavor="[file type]" --output-file="[output]"
-
-# Example:
-- pyftsubset Roboto-Regular.ttf --unicodes="U+0020-007F,U+00A0-00FF" --flavor="woff2" --output-file="Roboto-Regular.woff2"
-- pyftsubset Roboto-Regular.ttf --unicodes="U+0020-007F,U+00A0-00FF" --flavor="woff" --output-file="Roboto-Regular.woff"
-
-- pyftsubset Roboto-Regular.ttf --unicodes="U+0100-017F,U+20A0-20CF" --flavor="woff2" --output-file="Roboto-Regular-Extra.woff2"
-- pyftsubset Roboto-Regular.ttf --unicodes="U+0100-017F,U+20A0-20CF" --flavor="woff" --output-file="Roboto-Regular-Extra.woff"
-
-> https://github.com/fonttools/fonttools
-*/
-
-/// Load fonts subsets from folder
-///
-/// @author Reyno te Koppele
-///
-/// @link https://sass-lang.com/documentation/modules/string#unquote unquote()
-///
-/// @require {function} capitalize
-/// @require {variable} $unicodes
-/// @require {variable} $font-weights
-/// @require {variable} $fonts
-///
 @each $font in $fonts {
   @each $weight, $font-weight in $font-weights {
     $font-name: capitalize($font);
@@ -67,14 +19,13 @@ pyftsubset [input] --unicodes="[unicode-range(s)]" --flavor="[file type]" --outp
       }
 
       @font-face {
-        font-family:  $font-name;
-        src: local($local),
-        local($font-name + '-' + $weight-name),
-        url($path + '.woff2') format('woff2'),
-        url($path + '.woff') format('woff');
+        font-family: $font-name;
+        src: local($local), local($font-name + '-' + $weight-name),
+          url($path + '.woff2') format('woff2'),
+          url($path + '.woff') format('woff');
         font-weight: $font-weight;
         font-display: swap;
-        unicode-range: unquote($unicode);
+        unicode-range: string.unquote($unicode);
       }
     }
   }

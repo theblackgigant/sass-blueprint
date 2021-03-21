@@ -1,0 +1,109 @@
+:root {
+  --border-width: 1px;
+  --border-style: solid;
+}
+
+.btn-overview .btn {
+  text-decoration: none;
+  line-height: 1.5;
+  font: inherit;
+  font-size: 1rem;
+}
+
+.btn {
+  align-items: center;
+  justify-content: center;
+}
+
+.btn--slide::before {
+  position: absolute;
+}
+.btn--slide::before {
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.btn {
+  display: inline-flex;
+  background: none;
+  border: var(--border-size, 1px) var(--border-style) var(--clr-neutral-900);
+  outline: var(--outline-size, 0px) var(--border-style) var(--clr-neutral-900);
+  color: var(--clr-neutral-900);
+  cursor: pointer;
+  padding: calc(0.75em - var(--border-size, 1px))
+    calc(2rem - var(--border-size, 1px));
+  transition: background-color var(--timing-fast) var(--easing),
+    color var(--timing-fast) var(--easing);
+}
+.btn:visited {
+  color: var(--clr-neutral-900);
+}
+.btn:hover,
+.btn:focus {
+  background: var(--clr-neutral-900);
+  color: var(--clr-neutral-0);
+}
+.btn--cta {
+  --border-size: 0px;
+  border: none;
+  color: var(--clr-neutral-0);
+  background: var(--clr-cta-500);
+}
+.btn--cta:visited {
+  color: var(--clr-neutral-0);
+}
+.btn--cta:hover,
+.btn--cta:focus {
+  background: var(--clr-neutral-900);
+}
+.btn--inset {
+  --border-size: 2px;
+  --outline-size: var(--border-size);
+  outline-offset: calc(var(--outline-size) * -1);
+  transition: outline-offset var(--timing-fast) var(--easing);
+}
+.btn--inset:hover,
+.btn--inset:focus {
+  background: none;
+  color: inherit;
+  outline-offset: calc(var(--outline-size) * -3);
+}
+.btn--inset-inverted {
+  --border-size: 0px;
+  --outline-size: 2px;
+  background: var(--clr-secondary-500);
+  color: var(--clr-neutral-0);
+  outline-color: var(--clr-neutral-0);
+  outline-offset: 0;
+  transition: outline-offset var(--timing-fast) var(--easing);
+}
+.btn--inset-inverted:visited {
+  color: var(--clr-neutral-0);
+}
+.btn--inset-inverted:hover,
+.btn--inset-inverted:focus {
+  background: var(--clr-secondary-500);
+  outline-offset: calc(var(--outline-size) * -3);
+}
+.btn--slide {
+  position: relative;
+}
+.btn--slide::before {
+  content: '';
+  background: var(--clr-secondary-500);
+  max-width: 0;
+  transition: max-width var(--timing-fast) var(--easing),
+    color var(--timing-fast) var(--easing);
+  z-index: -1;
+}
+.btn--slide:hover,
+.btn--slide:focus {
+  background: none;
+}
+.btn--slide:hover::before,
+.btn--slide:focus::before {
+  content: '';
+  max-width: 100%;
+}

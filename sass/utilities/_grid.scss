@@ -1,14 +1,5 @@
 @use "../abstracts/mixins" as *;
 
-/// Class for creating differently spaced grids
-///
-/// @author Reyno te Koppele
-/// @group Components
-///
-/// @require {mixin} mq
-///
-/// @link https://developer.mozilla.org/en-US/docs/Web/CSS/repeat() repeat()
-///
 .grid {
   display: grid;
   grid-template-columns: var(--col-template, 1fr);
