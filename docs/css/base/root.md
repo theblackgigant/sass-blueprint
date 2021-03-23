@@ -63,6 +63,8 @@ The root element stores all (global) `CSS` variables. Some variables are generat
 
 ## Requirements
 
+- **[Function]** [tintColor](functions/colors/tintColor.md)
+- **[Function]** [shadeColor](functions/colors/shadeColor.md)
 - **[Variable]** [colors](variables/colors.md)
 - **[Variable]** [font-scale](variables/font-scales.md)
 - **[Variable]** [breakpoints](variables/breakpoints.md)
