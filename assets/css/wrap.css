@@ -1,0 +1,9 @@
+.wrap {
+  max-width: var(--breakpoint-medium);
+  margin: 0 auto;
+}
+
+.wrap--overview {
+  padding: 2rem;
+  background: var(--clr-neutral-100);
+}

@@ -1,0 +1,6 @@
+table.fonts-table {
+  display: table;
+  table-layout: auto;
+  color: #333;
+  text-align: left;
+}

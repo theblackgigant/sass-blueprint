@@ -1,0 +1,35 @@
+:root {
+  --fs-200: clamp(0.786rem, calc(0.753rem + 0.127vw), 0.857rem);
+  --fs-300: clamp(1rem, calc(0.934rem + 0.257vw), 1.143rem);
+  --fs-400: clamp(1.143rem, calc(1.077rem + 0.257vw), 1.286rem);
+  --fs-500: clamp(1.286rem, calc(1.187rem + 0.384vw), 1.5rem);
+  --fs-600: clamp(1.5rem, calc(1.401rem + 0.384vw), 1.714rem);
+  --fs-700: clamp(1.714rem, calc(1.582rem + 0.513vw), 2rem);
+  --fs-800: clamp(2.286rem, calc(2.022rem + 1.025vw), 2.857rem);
+  --fs-900: clamp(2.857rem, calc(2.461rem + 1.538vw), 3.714rem);
+}
+
+.fs-overview__item--200 {
+  font-size: var(--fs-200);
+}
+.fs-overview__item--300 {
+  font-size: var(--fs-300);
+}
+.fs-overview__item--400 {
+  font-size: var(--fs-400);
+}
+.fs-overview__item--500 {
+  font-size: var(--fs-500);
+}
+.fs-overview__item--600 {
+  font-size: var(--fs-600);
+}
+.fs-overview__item--700 {
+  font-size: var(--fs-700);
+}
+.fs-overview__item--800 {
+  font-size: var(--fs-800);
+}
+.fs-overview__item--900 {
+  font-size: var(--fs-900);
+}
