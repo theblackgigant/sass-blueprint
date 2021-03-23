@@ -28,6 +28,10 @@ tintColor(#0000ff, 80%) => #ccffcc
 }
 ```
 
+## Used by
+
+- **[CSS]** [:root](css/base/root.md)
+
 ## Usefull links
 
 - [mix()](https://sass-lang.com/documentation/modules/color#mix)
