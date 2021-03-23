@@ -233,9 +233,8 @@ _Resize browser to see responsive version._
 ```scss
 .columns {
   $columns: 12;
-  --gap: 2rem;
   display: grid;
-  gap: var(--gap);
+  gap: 2rem;
   grid-template-columns: repeat($columns, 1fr);
 
   &__col {
