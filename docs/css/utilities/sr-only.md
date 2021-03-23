@@ -1,3 +1,10 @@
+# .sr-only
+
+The `.sr-only` utility can be applied to elements that should only be visible by screen readers.
+
+## Code
+
+```css
 .sr-only {
   border: 0 !important;
   clip: rect(1px, 1px, 1px, 1px) !important;
@@ -11,3 +18,4 @@
   width: 1px !important;
   white-space: nowrap !important;
 }
+```

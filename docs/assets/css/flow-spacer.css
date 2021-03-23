@@ -1,0 +1,12 @@
+.markdown-section .flow-spacer > * {
+  margin: 0;
+}
+
+.flow-spacer--overview {
+  padding: 2rem;
+  background: var(--clr-neutral-100);
+}
+
+.markdown-section .flow-spacer > * + * {
+  margin-top: 0.75em;
+}

@@ -4,9 +4,6 @@
   "description": "Basic folder structure for your Sass project",
   "version": "1.0.0",
   "main": "index.js",
-  "scripts": {
-    "docs": "node index.js"
-  },
   "keywords": [
     "SASS",
     "SCSS",
@@ -16,8 +13,7 @@
   "author": "Reyno te Koppele",
   "license": "MIT",
   "dependencies": {
-    "docsify-cli": "^4.4.3",
-    "sassdoc": "^2.7.3"
+    "docsify-cli": "^4.4.3"
   },
   "devDependencies": {
     "sass": "^1.32.8"

@@ -1,16 +1,6 @@
 @use "../abstracts/mixins" as *;
 @use "../utilities/placeholders";
 
-/// Class for creating different looking buttons
-///
-/// @author Reyno te Koppele
-/// @group Components
-///
-/// @require {placeholder} %flex
-/// @require {placeholder} %absolute
-///
-/// @link https://developer.mozilla.org/en-US/docs/Web/CSS/calc() calc()
-///
 .btn {
   display: inline-flex;
   @extend %flex--center;

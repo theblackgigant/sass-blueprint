@@ -1,13 +1,3 @@
-/// Colors to use within our SASS. Tints and shades will automatically be generated
-///
-/// @author Reyno te Koppele
-///
-/// @type Map
-/// @prop {Color} primary [hsl(186, 37%, 38%)] - Color for primary use
-/// @prop {Color} secondary [hsl(200, 100%, 36%)] - Color for secondary use
-/// @prop {Color} cta [hsl(0, 66%, 60%)] - Color to emphasize elements
-/// @prop {Color} neutral [hsl(210, 11%, 71%)] - Color for neutral use
-///
 $colors: (
   primary: hsl(186, 37%, 38%),
   secondary: hsl(200, 100%, 36%),
