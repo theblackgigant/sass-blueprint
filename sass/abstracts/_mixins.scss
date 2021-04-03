@@ -19,3 +19,37 @@
     @content;
   }
 }
+
+@mixin min($property, $values...) {
+  #{$property}: list.nth($values, 1);
+  #{$property}: min(#{$values});
+}
+
+@mixin max($property, $values...) {
+  #{$property}: list.nth($values, 1);
+  #{$property}: max(#{$values});
+}
+
+@mixin ie-grid-items($cols, $rows) {
+  $row: 1;
+  $column: 0;
+
+  @for $i from 1 through $rows * $cols {
+    $column: $column + 1;
+
+    &:nth-child(#{$i}) {
+      -ms-grid-column: 1;
+      -ms-grid-row: $i;
+
+      @include mq('medium') {
+        -ms-grid-column: $column;
+        -ms-grid-row: $row;
+      }
+    }
+
+    @if ($i % $cols == 0) {
+      $column: 0;
+      $row: $row + 1;
+    }
+  }
+}
