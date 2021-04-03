@@ -34,6 +34,7 @@
 
   - [%flex](placeholders/flex.md)
   - [%absolute](placeholders/absolute.md)
+  - [%bg-center](placeholders/bg-center.md)
 
 - CSS
 
