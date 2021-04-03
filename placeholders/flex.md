@@ -16,6 +16,11 @@ Easily create `flex` items without having to retype the syntax.
   @extend %flex--center;
   // Your CSS here
 }
+.baz {
+  @extend %flex;
+  @extend %flex--space;
+  // Your CSS here
+}
 ```
 
 ## Code
@@ -27,6 +32,10 @@ Easily create `flex` items without having to retype the syntax.
   &--center {
     align-items: center;
     justify-content: center;
+  }
+
+  &--space {
+    justify-content: space-between;
   }
 }
 ```
