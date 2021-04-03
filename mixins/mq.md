@@ -41,6 +41,7 @@
 
 - **[CSS]** [.grid](css/components/grid.md)
 - **[CSS]** [.columns](css/components/grid.md)
+- **[Mixin]** [ie-grid-items](mixins/ie-grid-items.md)
 
 ## Usefull links
 

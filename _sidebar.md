@@ -11,6 +11,9 @@
 
   - [mq](mixins/mq.md)
   - [pseudo](mixins/pseudo.md)
+  - [min](mixins/min.md)
+  - [max](mixins/max.md)
+  - [ie-grid-items](mixins/ie-grid-items.md)
 
 - Functions
 
